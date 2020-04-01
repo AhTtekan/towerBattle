@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2354e8bd90293f4e8811f2fd6fd4947, type: 3}
+  m_Name: EnemyActState
+  m_EditorClassIdentifier: 
+  stateName: EnemyAct
+  playerInput: {fileID: -944628639613478452, guid: 667298a5446da7547b2b5d657a7f16d4,
+    type: 3}
+  nextState: {fileID: 11400000, guid: 98e5638ac215806469dd544bc5b4e9c7, type: 2}
+  previousState: {fileID: 11400000, guid: 98e5638ac215806469dd544bc5b4e9c7, type: 2}
