@@ -194,9 +194,33 @@
             "id": "f11fa784-391d-4bea-a359-70e025d5b553",
             "actions": [
                 {
-                    "name": "New action",
+                    "name": "Select",
                     "type": "Button",
                     "id": "fc0c2cbc-8104-495e-8786-a71aea705b13",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "Return",
+                    "type": "Button",
+                    "id": "7bc6eb55-b9b7-4fee-b4dc-7ecdb440e77b",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "Move",
+                    "type": "Value",
+                    "id": "a4a34d0a-4c40-4bc6-b60d-5557ab104b1e",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "RemoveLatestAction",
+                    "type": "Button",
+                    "id": "4adc31e8-d5bf-4442-9804-91113e2c605d",
                     "expectedControlType": "",
                     "processors": "",
                     "interactions": ""
@@ -206,11 +230,55 @@
                 {
                     "name": "",
                     "id": "2391a863-2e74-454b-9bda-642a4c7b0e80",
-                    "path": "",
+                    "path": "<Gamepad>/buttonSouth",
                     "interactions": "",
                     "processors": "",
                     "groups": "Gamepad",
-                    "action": "New action",
+                    "action": "Select",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "e419c805-aba9-4289-8b65-9be719b3d9c9",
+                    "path": "<Gamepad>/buttonEast",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Gamepad",
+                    "action": "Return",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "c2a81e86-a436-4cf3-89d7-784135735fa7",
+                    "path": "<Gamepad>/dpad",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Gamepad",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "7543bcfc-6064-4e9b-ad2a-aa4403ffcc22",
+                    "path": "<Gamepad>/leftStick",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "0c06c28d-5668-43c3-a88c-632ea0da8513",
+                    "path": "<Gamepad>/buttonWest",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Gamepad",
+                    "action": "RemoveLatestAction",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
