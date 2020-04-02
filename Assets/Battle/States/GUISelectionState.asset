@@ -13,7 +13,6 @@ MonoBehaviour:
   m_Name: GUISelectionState
   m_EditorClassIdentifier: 
   stateName: GuiSelection
-  playerInput: {fileID: -944628639613478452, guid: 8c0f6c22c8705c24997c08a4c0a51e2d,
-    type: 3}
+  InputMapName: GuiSelection
   nextState: {fileID: 11400000, guid: 1cb1e14737a665440b9ee334f9295a50, type: 2}
   previousState: {fileID: 11400000, guid: 88d099b488c3e64479a6a2ae5aa60ee5, type: 2}

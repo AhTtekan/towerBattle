@@ -13,7 +13,6 @@ MonoBehaviour:
   m_Name: CharacterSelectState
   m_EditorClassIdentifier: 
   stateName: CharacterSelect
-  playerInput: {fileID: -944628639613478452, guid: 17ad8ddc8c3fe0a41b7d9b13899e7667,
-    type: 3}
+  InputMapName: CharacterSelect
   nextState: {fileID: 11400000, guid: 9b021059720a75249bbf48f1b186a154, type: 2}
   previousState: {fileID: 11400000, guid: 98e5638ac215806469dd544bc5b4e9c7, type: 2}

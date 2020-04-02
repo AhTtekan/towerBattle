@@ -13,7 +13,6 @@ MonoBehaviour:
   m_Name: EnemyActState
   m_EditorClassIdentifier: 
   stateName: EnemyAct
-  playerInput: {fileID: -944628639613478452, guid: 667298a5446da7547b2b5d657a7f16d4,
-    type: 3}
+  InputMapName: NoInput
   nextState: {fileID: 11400000, guid: 98e5638ac215806469dd544bc5b4e9c7, type: 2}
   previousState: {fileID: 11400000, guid: 98e5638ac215806469dd544bc5b4e9c7, type: 2}

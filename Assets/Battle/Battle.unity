@@ -315,7 +315,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Actions: {fileID: -944628639613478452, guid: d2dab3ed339b4874cae0c0adcf3b8b84,
+  m_Actions: {fileID: -944628639613478452, guid: c181ae8b62ce20542a34bb63631181df,
     type: 3}
   m_NotificationBehavior: 2
   m_UIInputModule: {fileID: 0}
@@ -330,12 +330,69 @@ MonoBehaviour:
       m_Calls: []
   m_ActionEvents:
   - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1981092985}
+        m_MethodName: IncrementBattleState
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 75e24bf6-01ae-4e4d-8f89-419a8d2d958f
+    m_ActionName: Building/MoveToCharacterSelect
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1981092985}
+        m_MethodName: IncrementBattleState
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 3ecf497e-45ec-45c9-9a7f-813d77aa87cb
+    m_ActionName: CharacterSelect/MoveToGuiSelection
+  - m_PersistentCalls:
       m_Calls: []
-    m_ActionId: 38384c3e-6c75-48a0-98fe-58ce9bb529c7
-    m_ActionName: Input/MoveToCharacterSelect
+    m_ActionId: 9e9c1c1d-6ea0-45dd-9386-315801025f2f
+    m_ActionName: CharacterSelect/CharacterLeft
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 5b7efe86-3bd9-45e2-89a1-47def14117bf
+    m_ActionName: CharacterSelect/CharacterRight
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: fc0c2cbc-8104-495e-8786-a71aea705b13
+    m_ActionName: GuiSelection/New action
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 3f71e1c7-7d51-4210-95f0-fe37e359d29a
+    m_ActionName: NoInput/New action
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1981092985}
+        m_MethodName: DecrementBattleState
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 872a6ee1-d8c4-42a7-9627-6bebb5d86d79
+    m_ActionName: CharacterSelect/MoveToBuilding[/XInputControllerWindows/buttonEast,/Keyboard/escape]
   m_NeverAutoSwitchControlSchemes: 0
-  m_DefaultControlScheme: 
-  m_DefaultActionMap: Input
+  m_DefaultControlScheme: Gamepad
+  m_DefaultActionMap: NoInput
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
 --- !u!4 &1981092984
@@ -370,3 +427,4 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 9b021059720a75249bbf48f1b186a154, type: 2}
   - {fileID: 11400000, guid: 1cb1e14737a665440b9ee334f9295a50, type: 2}
   - {fileID: 11400000, guid: 07c28271958500248b53c0e0259280e3, type: 2}
+  playerInput: {fileID: 1981092983}
