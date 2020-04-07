@@ -114,7 +114,7 @@
                     "name": "",
                     "id": "3daf1320-53c3-499a-b828-236570030983",
                     "path": "<Gamepad>/leftStick/left",
-                    "interactions": "",
+                    "interactions": "Hold(duration=0.05)",
                     "processors": "",
                     "groups": "Gamepad",
                     "action": "CharacterLeft",
@@ -147,7 +147,7 @@
                     "name": "",
                     "id": "4359f296-8ba8-471c-af71-baa429b7605f",
                     "path": "<Gamepad>/leftStick/right",
-                    "interactions": "",
+                    "interactions": "Hold(duration=0.05)",
                     "processors": "",
                     "groups": "Gamepad",
                     "action": "CharacterRight",
@@ -250,26 +250,81 @@
                     "isPartOfComposite": false
                 },
                 {
-                    "name": "",
-                    "id": "c2a81e86-a436-4cf3-89d7-784135735fa7",
-                    "path": "<Gamepad>/dpad",
+                    "name": "MoveNoSides",
+                    "id": "f4736fc4-072e-4a41-9c6d-4d3fbf204a6f",
+                    "path": "2DVector",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "up",
+                    "id": "f11abc60-ccf7-49b5-af61-af1255e4b22e",
+                    "path": "<Gamepad>/dpad/up",
                     "interactions": "",
                     "processors": "",
                     "groups": "Gamepad",
                     "action": "Move",
                     "isComposite": false,
-                    "isPartOfComposite": false
+                    "isPartOfComposite": true
                 },
                 {
-                    "name": "",
-                    "id": "7543bcfc-6064-4e9b-ad2a-aa4403ffcc22",
-                    "path": "<Gamepad>/leftStick",
+                    "name": "up",
+                    "id": "535a7ecf-7e38-4c42-bd6d-46e7d8eaa470",
+                    "path": "<Gamepad>/leftStick/up",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Gamepad",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "down",
+                    "id": "880856fd-4b74-4d73-b7f7-275bf79de402",
+                    "path": "<Gamepad>/dpad/down",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
                     "action": "Move",
                     "isComposite": false,
-                    "isPartOfComposite": false
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "down",
+                    "id": "24767e2f-a7ff-4e0a-b458-9ca501bd0648",
+                    "path": "<Gamepad>/leftStick/down",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "left",
+                    "id": "8d498746-f895-41b7-8371-11ac4543643f",
+                    "path": "",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "right",
+                    "id": "b4056f6e-3f56-4f3b-be4c-a7c67c0403f0",
+                    "path": "",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": true
                 },
                 {
                     "name": "",

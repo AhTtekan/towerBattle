@@ -9,4 +9,13 @@
     {
         return (value < min) ? min : (value > max) ? max : value;
     }
+
+    internal static int Wrap(int value, int min, int max)
+    {
+        if (value < min)
+            return max;
+        if (value > max)
+            return min;
+        return value;
+    }
 }
