@@ -1,4 +1,5 @@
 ﻿using System.Linq;
+using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.EventSystems;
@@ -28,16 +29,24 @@ public class UIBattleSelectionManager : MonoBehaviour
     
     public void PopulateNextColumn(int index)
     {
+        Column2Content.transform.DestroyAllChildren();
+
         var columnManager = _battleColumnController
             .GetColumnLastSelected(index)?
             .GetComponent<IColumnManager>();
 
         columnManager.NextColumnContent.transform.DestroyAllChildren();
 
-        foreach(var item in columnManager.GetNextColumnOptions())
-        {
+        var texts = columnManager.GetNextColumnOptions().ToArray();
 
+        for(int i = 0; i < texts.Count(); i++)
+        {
+            GenerateNewButton(i, texts[i]);
         }
+
+        _battleColumnController.Forward();
+
+        UIPopulateColumn.Invoke();
     }
 
     public void PopulateColumn2WithTest()
@@ -64,13 +73,13 @@ public class UIBattleSelectionManager : MonoBehaviour
 
         for (int i = 0; i < UnityEngine.Random.Range(4, 10); i++)
         {
-            GenerateNewButton(i);
+            GenerateNewButton(i, "Test");
         }
 
         UIPopulateColumn.Invoke();
     }
 
-    private void GenerateNewButton(int i)
+    private RectTransform GenerateNewButton(int i, string text)
     {
         RectTransform button = GameObject.Instantiate(GUIButtonPrefab).GetComponent<RectTransform>();
         EventTrigger trigger = button.GetComponent<EventTrigger>();
@@ -88,5 +97,10 @@ public class UIBattleSelectionManager : MonoBehaviour
         button.SetParent(Column2Content.transform, false);
         entry.callback.AddListener((eventData) => { button.parent.parent.parent.GetComponent<UIUpdateFunctions>().Scroll(); });
         button.anchoredPosition = new Vector2(button.anchoredPosition.x, button.sizeDelta.y * -i);
+
+        var textObj = button.GetComponentInChildren<TextMeshProUGUI>();
+        textObj.text = text;
+
+        return button;
     }
 }
