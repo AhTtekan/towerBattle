@@ -2,14 +2,13 @@
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.EventSystems;
+using UnityEngine.InputSystem;
 using UnityEngine.UI;
 
 public class UIBattleSelectionManager : MonoBehaviour
 {
 
 #pragma warning disable 0649
-    //[SerializeField]
-    //InputReader _reader;
     [SerializeField]
     private CanvasGroup Column2Content;
     [SerializeField]
@@ -25,9 +24,22 @@ public class UIBattleSelectionManager : MonoBehaviour
     void Awake()
     {
         _battleColumnController = new BattleColumnMovementController(Column1Content, Column2Content, null);
-        //_reader.OnCancel += _battleColumnController.Back;
     }
     
+    public void PopulateNextColumn(int index)
+    {
+        var columnManager = _battleColumnController
+            .GetColumnLastSelected(index)?
+            .GetComponent<IColumnManager>();
+
+        columnManager.NextColumnContent.transform.DestroyAllChildren();
+
+        foreach(var item in columnManager.GetNextColumnOptions())
+        {
+
+        }
+    }
+
     public void PopulateColumn2WithTest()
     {
         PopulateColumn2WithTestData();
@@ -37,6 +49,13 @@ public class UIBattleSelectionManager : MonoBehaviour
     public void SetColumn1LastSelected(Button button)
     {
         _battleColumnController.SetColumnLastSelected(0, button);
+    }
+
+    public void Back(InputAction.CallbackContext callbackContext)
+    {
+        if (!callbackContext.performed)
+            return;
+        _battleColumnController.Back();
     }
 
     private void PopulateColumn2WithTestData()

@@ -63,6 +63,11 @@ public class BattleColumnMovementController
         Columns[columnIndex].LastSelectedButton = button;
     }
 
+    public Button GetColumnLastSelected(int columnIndex)
+    {
+        return Columns[columnIndex].LastSelectedButton;
+    }
+
     private void ClearColumn(int columnIndex)
     {
         Columns[columnIndex].ContentBox.transform.DestroyAllChildren();
