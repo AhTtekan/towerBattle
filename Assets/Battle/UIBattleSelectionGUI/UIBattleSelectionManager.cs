@@ -27,17 +27,20 @@ public class UIBattleSelectionManager : MonoBehaviour
 
     public void PopulateNextColumn()
     {
+        if (_battleColumnController.IsLastColumn())
+            return;
+
         var columnManager = _battleColumnController
-            .GetColumnLastSelected(_battleColumnController.index)?
+            .GetColumnLastSelected(_battleColumnController.Index)?
             .GetComponent<ColumnManager>();
 
-        _battleColumnController.Columns[_battleColumnController.index + 1].ContentBox.transform.DestroyAllChildren();
+        _battleColumnController.Columns[_battleColumnController.Index + 1].ContentBox.transform.DestroyAllChildren();
 
         var texts = columnManager.GetNextColumnOptions().ToArray();
 
         for (int i = 0; i < texts.Count(); i++)
         {
-            GenerateNewButton(i, texts[i], _battleColumnController.Columns[_battleColumnController.index + 1].ContentBox.transform);
+            GenerateNewButton(i, texts[i], _battleColumnController.Columns[_battleColumnController.Index + 1].ContentBox.transform);
         }
 
         _battleColumnController.Forward();
@@ -47,7 +50,7 @@ public class UIBattleSelectionManager : MonoBehaviour
 
     public void SetColumnLastSelected(Button button)
     {
-        _battleColumnController.SetColumnLastSelected(_battleColumnController.index, button);
+        _battleColumnController.SetColumnLastSelected(_battleColumnController.Index, button);
     }
 
     public void Back(InputAction.CallbackContext callbackContext)
