@@ -1,22 +1,21 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 
-public class AttackColumnManager : MonoBehaviour, IColumnManager
+public class AttackColumnManager : ColumnManager
 {
     [SerializeField]
     private CanvasGroup nextColumnContent;
 
-    public CanvasGroup NextColumnContent 
-    { 
+    public override CanvasGroup NextColumnContent
+    {
         get
         {
             return nextColumnContent;
         }
     }
 
-    public IEnumerable<string> GetNextColumnOptions()
+    public override IEnumerable<string> GetNextColumnOptions()
     {
         return new List<string>() { "Attack" };
     }
-
 }

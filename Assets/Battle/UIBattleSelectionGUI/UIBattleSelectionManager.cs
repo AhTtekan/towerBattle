@@ -21,25 +21,25 @@ public class UIBattleSelectionManager : MonoBehaviour
     private BattleColumnMovementController _battleColumnController;
 
     public UnityEvent UIPopulateColumn;
-    
+
     void Awake()
     {
         _battleColumnController = new BattleColumnMovementController(Column1Content, Column2Content, null);
     }
-    
-    public void PopulateNextColumn(int index)
+
+    public void PopulateNextColumn()
     {
-        Column2Content.transform.DestroyAllChildren();
+        //Column2Content.transform.DestroyAllChildren();
 
         var columnManager = _battleColumnController
-            .GetColumnLastSelected(index)?
-            .GetComponent<IColumnManager>();
+            .GetColumnLastSelected(_battleColumnController.index)?
+            .GetComponent<ColumnManager>();
 
         columnManager.NextColumnContent.transform.DestroyAllChildren();
 
         var texts = columnManager.GetNextColumnOptions().ToArray();
 
-        for(int i = 0; i < texts.Count(); i++)
+        for (int i = 0; i < texts.Count(); i++)
         {
             GenerateNewButton(i, texts[i]);
         }

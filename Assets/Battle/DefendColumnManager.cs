@@ -1,13 +1,12 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 
-public class DefendColumnManager : MonoBehaviour, IColumnManager
+public class DefendColumnManager : ColumnManager
 {
     [SerializeField]
     private CanvasGroup nextColumnContent;
 
-    public CanvasGroup NextColumnContent
+    public override CanvasGroup NextColumnContent
     {
         get
         {
@@ -15,20 +14,8 @@ public class DefendColumnManager : MonoBehaviour, IColumnManager
         }
     }
 
-    public IEnumerable<string> GetNextColumnOptions()
+    public override IEnumerable<string> GetNextColumnOptions()
     {
         return new[] { "Defend" };
-    }
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }

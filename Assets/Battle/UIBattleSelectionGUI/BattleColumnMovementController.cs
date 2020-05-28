@@ -6,8 +6,8 @@ using UnityEngine.UI;
 public class BattleColumnMovementController
 {
     Column[] Columns;
-    int index;
-       
+    public int index { get; set; }
+
     /// <summary>
     /// Constructor for BattleColumnMovementController
     /// </summary>
@@ -31,7 +31,7 @@ public class BattleColumnMovementController
         var column = Columns[index];
         if (column.LastSelectedButton != null)
         {
-            if(clearOldContent)
+            if (clearOldContent)
                 ClearColumn(index + 1);
             column.ContentBox.interactable = true;
             Columns[index + 1].ContentBox.interactable = false;
@@ -46,7 +46,7 @@ public class BattleColumnMovementController
         if (index == Columns.Length)
             return;
         index++;
-        
+
         Columns[index].ContentBox.interactable = true;
         var previousColumn = Columns[index - 1];
         previousColumn.ContentBox.interactable = false;
@@ -57,7 +57,7 @@ public class BattleColumnMovementController
         if (EventSystem.current != null && Columns[index].ContentBox.transform.childCount > 0)
             EventSystem.current.SetSelectedGameObject(Columns[index].ContentBox.transform.GetChild(0).gameObject);
     }
-        
+
     public void SetColumnLastSelected(int columnIndex, Button button)
     {
         Columns[columnIndex].LastSelectedButton = button;
