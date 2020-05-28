@@ -11,9 +11,7 @@ public class UIBattleSelectionManager : MonoBehaviour
 
 #pragma warning disable 0649
     [SerializeField]
-    private CanvasGroup Column2Content;
-    [SerializeField]
-    private CanvasGroup Column1Content;
+    private CanvasGroup[] ColumnContents;
     [SerializeField]
     private Button GUIButtonPrefab;
 #pragma warning restore 0649
@@ -24,24 +22,22 @@ public class UIBattleSelectionManager : MonoBehaviour
 
     void Awake()
     {
-        _battleColumnController = new BattleColumnMovementController(Column1Content, Column2Content, null);
+        _battleColumnController = new BattleColumnMovementController(ColumnContents);
     }
 
     public void PopulateNextColumn()
     {
-        //Column2Content.transform.DestroyAllChildren();
-
         var columnManager = _battleColumnController
             .GetColumnLastSelected(_battleColumnController.index)?
             .GetComponent<ColumnManager>();
 
-        columnManager.NextColumnContent.transform.DestroyAllChildren();
+        _battleColumnController.Columns[_battleColumnController.index + 1].ContentBox.transform.DestroyAllChildren();
 
         var texts = columnManager.GetNextColumnOptions().ToArray();
 
         for (int i = 0; i < texts.Count(); i++)
         {
-            GenerateNewButton(i, texts[i]);
+            GenerateNewButton(i, texts[i], _battleColumnController.Columns[_battleColumnController.index + 1].ContentBox.transform);
         }
 
         _battleColumnController.Forward();
@@ -49,15 +45,9 @@ public class UIBattleSelectionManager : MonoBehaviour
         UIPopulateColumn.Invoke();
     }
 
-    public void PopulateColumn2WithTest()
+    public void SetColumnLastSelected(Button button)
     {
-        PopulateColumn2WithTestData();
-        _battleColumnController.Forward();
-    }
-
-    public void SetColumn1LastSelected(Button button)
-    {
-        _battleColumnController.SetColumnLastSelected(0, button);
+        _battleColumnController.SetColumnLastSelected(_battleColumnController.index, button);
     }
 
     public void Back(InputAction.CallbackContext callbackContext)
@@ -67,19 +57,7 @@ public class UIBattleSelectionManager : MonoBehaviour
         _battleColumnController.Back();
     }
 
-    private void PopulateColumn2WithTestData()
-    {
-        Column2Content.transform.DestroyAllChildren();
-
-        for (int i = 0; i < UnityEngine.Random.Range(4, 10); i++)
-        {
-            GenerateNewButton(i, "Test");
-        }
-
-        UIPopulateColumn.Invoke();
-    }
-
-    private RectTransform GenerateNewButton(int i, string text)
+    private RectTransform GenerateNewButton(int i, string text, Transform contentBox)
     {
         RectTransform button = GameObject.Instantiate(GUIButtonPrefab).GetComponent<RectTransform>();
         EventTrigger trigger = button.GetComponent<EventTrigger>();
@@ -94,7 +72,7 @@ public class UIBattleSelectionManager : MonoBehaviour
             };
             trigger.triggers.Add(entry);
         }
-        button.SetParent(Column2Content.transform, false);
+        button.SetParent(contentBox, false);
         entry.callback.AddListener((eventData) => { button.parent.parent.parent.GetComponent<UIUpdateFunctions>().Scroll(); });
         button.anchoredPosition = new Vector2(button.anchoredPosition.x, button.sizeDelta.y * -i);
 

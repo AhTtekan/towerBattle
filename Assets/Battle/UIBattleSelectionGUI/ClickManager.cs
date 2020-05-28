@@ -19,7 +19,7 @@ public class ClickManager : MonoBehaviour
 
     public void SetPreviousColumnSelected()
     {
-        _uiBattleSelectionManager.SetColumn1LastSelected(gameObject.GetComponent<Button>());
+        _uiBattleSelectionManager.SetColumnLastSelected(gameObject.GetComponent<Button>());
     }
 
     public void PopulateNextColumn()

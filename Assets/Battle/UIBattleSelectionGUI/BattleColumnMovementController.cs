@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class BattleColumnMovementController
 {
-    Column[] Columns;
+    public Column[] Columns { get; set; }
     public int index { get; set; }
 
     /// <summary>
@@ -73,7 +73,7 @@ public class BattleColumnMovementController
         Columns[columnIndex].ContentBox.transform.DestroyAllChildren();
     }
 
-    private struct Column
+    public struct Column
     {
         public CanvasGroup ContentBox;
         public Button LastSelectedButton;

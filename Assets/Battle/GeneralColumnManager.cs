@@ -1,16 +1,13 @@
 ﻿using System.Collections.Generic;
 
-public class ItemColumnManager : ColumnManager
+public class GeneralColumnManager : ColumnManager
 {
     public override IEnumerable<string> GetNextColumnOptions()
     {
         return new[]
         {
-            "Item 1",
-            "Item 2",
-            "Item 3",
-            "Item 4",
-            "Item 5"
+            "Column 3 Content 1",
+            "Column 3 Content 2",
         };
     }
 }
