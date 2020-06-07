@@ -3,5 +3,5 @@ using UnityEngine;
 
 public abstract class ColumnManager : MonoBehaviour
 {
-    public abstract IEnumerable<string> GetNextColumnOptions();
+    public abstract IEnumerable<IQueueable> GetNextColumnOptions();
 }

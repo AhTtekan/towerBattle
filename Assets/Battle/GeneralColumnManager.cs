@@ -1,13 +1,15 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
+/// <summary>
+/// Used for Column 3 Content generation
+/// Column 3 content is Target Selection
+/// Content will be based on column 2 selection (attack, defend, item, ability)
+/// </summary>
 public class GeneralColumnManager : ColumnManager
 {
-    public override IEnumerable<string> GetNextColumnOptions()
+    public override IEnumerable<IQueueable> GetNextColumnOptions()
     {
-        return new[]
-        {
-            "Column 3 Content 1",
-            "Column 3 Content 2",
-        };
+        throw new NotImplementedException();
     }
 }

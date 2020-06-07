@@ -60,7 +60,7 @@ public class UIBattleSelectionManager : MonoBehaviour
         _battleColumnController.Back();
     }
 
-    private RectTransform GenerateNewButton(int i, string text, Transform contentBox)
+    private RectTransform GenerateNewButton(int i, IQueueable queueable, Transform contentBox)
     {
         RectTransform button = GameObject.Instantiate(GUIButtonPrefab).GetComponent<RectTransform>();
         EventTrigger trigger = button.GetComponent<EventTrigger>();
@@ -80,7 +80,7 @@ public class UIBattleSelectionManager : MonoBehaviour
         button.anchoredPosition = new Vector2(button.anchoredPosition.x, button.sizeDelta.y * -i);
 
         var textObj = button.GetComponentInChildren<TextMeshProUGUI>();
-        textObj.text = text;
+        textObj.text = queueable.Name;
 
         return button;
     }

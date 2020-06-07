@@ -3,8 +3,8 @@ using UnityEngine;
 
 public class DefendColumnManager : ColumnManager
 {
-    public override IEnumerable<string> GetNextColumnOptions()
+    public override IEnumerable<IQueueable> GetNextColumnOptions()
     {
-        return new[] { "Defend" };
+        return new[] { new DefendAbility() };
     }
 }

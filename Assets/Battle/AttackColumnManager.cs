@@ -3,8 +3,8 @@ using UnityEngine;
 
 public class AttackColumnManager : ColumnManager
 {
-    public override IEnumerable<string> GetNextColumnOptions()
+    public override IEnumerable<IQueueable> GetNextColumnOptions()
     {
-        return new List<string>() { "Attack" };
+        return new List<AttackAbility>() { new AttackAbility() };
     }
 }

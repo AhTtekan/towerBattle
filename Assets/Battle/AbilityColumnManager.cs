@@ -1,18 +1,13 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class AbilityColumnManager : ColumnManager
 {
-    public override IEnumerable<string> GetNextColumnOptions()
+    public override IEnumerable<IQueueable> GetNextColumnOptions()
     {
-        return new[]
-        {
-            "Test 1",
-            "Test 2",
-            "Test 3",
-            "Test 4",
-            "Test 5",
-            "Test 6",
-        };
+        var abilities = GameObject.FindObjectOfType<CharacterManager>().SelectedCharacter.LearnedAbilities;
+
+        return abilities.Select(x => x as IQueueable);
     }
 }
