@@ -1,5 +1,5 @@
 ﻿public class BattleItem : Item, IQueueable
 {
-    public string Name { get; }
+    public string Name { get; set; }
     public int APCost { get; }
 }

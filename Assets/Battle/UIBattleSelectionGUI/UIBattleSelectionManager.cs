@@ -82,6 +82,9 @@ public class UIBattleSelectionManager : MonoBehaviour
         var textObj = button.GetComponentInChildren<TextMeshProUGUI>();
         textObj.text = queueable.Name;
 
+        var columnManager = button.GetComponent<ColumnManager>();
+        columnManager.AssociatedAction = queueable;
+
         return button;
     }
 }

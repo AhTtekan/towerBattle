@@ -1,6 +1,6 @@
 ﻿public interface IQueueable
 {
-    string Name { get; }
+    string Name { get; set; }
 
     int APCost { get; }
 }
