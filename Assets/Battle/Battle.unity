@@ -2243,6 +2243,7 @@ GameObject:
   - component: {fileID: 1981092984}
   - component: {fileID: 1981092985}
   - component: {fileID: 1981092983}
+  - component: {fileID: 1981092986}
   m_Layer: 0
   m_Name: Manager
   m_TagString: Untagged
@@ -2433,3 +2434,15 @@ MonoBehaviour:
   playerInput: {fileID: 1981092983}
   selectionGuiCanvas: {fileID: 625407366}
   eventSystem: {fileID: 1721440922}
+--- !u!114 &1981092986
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1981092982}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78f7c99098193d843bf38537bbc5ac05, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

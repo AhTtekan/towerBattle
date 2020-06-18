@@ -16,7 +16,8 @@ public class UIBattleSelectionManager : MonoBehaviour
     private Button GUIButtonPrefab;
 #pragma warning restore 0649
 
-    private BattleColumnMovementController _battleColumnController;
+    //TODO: Make this private again
+    public BattleColumnMovementController _battleColumnController;
 
     public UnityEvent UIPopulateColumn;
 
@@ -84,6 +85,11 @@ public class UIBattleSelectionManager : MonoBehaviour
 
         var columnManager = button.GetComponent<ColumnManager>();
         columnManager.AssociatedAction = queueable;
+
+        if (queueable is TargetQueueable)
+        {
+            columnManager.AssociatedTarget = ((TargetQueueable)queueable).Target;
+        }
 
         return button;
     }

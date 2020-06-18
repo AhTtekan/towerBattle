@@ -23,6 +23,18 @@ public class BattleStateManager : MonoBehaviour
         Debug.Log($"Map: {playerInput.currentActionMap.name}");
     }
 
+    //TODO: Debug crap here, remove
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.T))
+        {
+            var c = GameObject.FindObjectOfType<UIBattleSelectionManager>()._battleColumnController;
+
+            Debug.Log($"Currently Selected Action: {c.GetColumnLastSelected(1).GetComponent<ColumnManager>().AssociatedAction.Name} " +
+                $"being cast on {c.GetColumnLastSelected(2).GetComponent<ColumnManager>().AssociatedTarget.CharacterName}.");
+        }
+    }
+
     public void IncrementBattleState(InputAction.CallbackContext callbackContext)
     {
         if (!callbackContext.started)

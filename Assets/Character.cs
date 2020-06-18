@@ -11,11 +11,13 @@ public class Character : Unit
     = new List<Ability>() {
         new Ability
         {
-            Name = "Lightning"
+            Name = "Lightning",
+            TargetType = TargetTypes.Enemy
         },
         new Ability
         {
-            Name = "Heal"
+            Name = "Heal",
+            TargetType = TargetTypes.Ally
         }
     };
 

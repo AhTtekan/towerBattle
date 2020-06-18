@@ -5,4 +5,6 @@
     public override string Name => "Defend";
 
     public override int LevelLearned => 1;
+
+    public override TargetTypes TargetType { get => TargetTypes.SelfOnly; set => base.TargetType = value; }
 }

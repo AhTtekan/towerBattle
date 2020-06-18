@@ -1,5 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using System.Linq;
 
 /// <summary>
 /// Used for Column 3 Content generation
@@ -10,6 +10,22 @@ public class GeneralColumnManager : ColumnManager
 {
     public override IEnumerable<IQueueable> GetNextColumnOptions()
     {
-        throw new NotImplementedException();
+        return AssociatedAction.TargetType.GetTargets()
+            .Select(x => new TargetQueueable
+            {
+                Name = x.CharacterName,
+                Target = x
+            });
     }
+}
+
+public class TargetQueueable : IQueueable
+{
+    public string Name { get; set; }
+
+    public int APCost => 0;
+
+    public TargetTypes TargetType { get; set; }
+
+    public Unit Target { get; set; }
 }

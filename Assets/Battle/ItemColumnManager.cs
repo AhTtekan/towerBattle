@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 public class ItemColumnManager : ColumnManager
 {
@@ -10,31 +9,38 @@ public class ItemColumnManager : ColumnManager
         {
             new BattleItem
             {
-                Name = "Potion"
+                Name = "Potion",
+                TargetType = TargetTypes.Ally
             },
             new BattleItem
             {
-                Name = "Hi Potion"
+                Name = "Hi Potion",
+                TargetType = TargetTypes.Ally
             },
             new BattleItem
             {
-                Name = "Elixir"
+                Name = "Elixir",
+                TargetType = TargetTypes.Ally
             },
             new BattleItem
             {
-                Name = "Phoenix Down"
+                Name = "Phoenix Down",
+                TargetType = TargetTypes.Ally
             },
             new BattleItem
             {
-                Name = "Potion"
+                Name = "Potion",
+                TargetType = TargetTypes.Ally
             },
             new BattleItem
             {
-                Name = "Fire Bomb"
+                Name = "Fire Bomb",
+                TargetType = TargetTypes.AllEnemies
             },
             new BattleItem
             {
-                Name = "Restore"
+                Name = "Restore",
+                TargetType = TargetTypes.Ally
             },
         };
     }
