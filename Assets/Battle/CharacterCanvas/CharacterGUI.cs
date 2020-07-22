@@ -35,54 +35,86 @@ public class CharacterGUI : MonoBehaviour
         transform.Find("NameText").GetComponent<TextMeshProUGUI>().text = character.CharacterName;
     }
 
+    private Image _hpBarCurrent;
     Image HPBarCurrent
     {
         get
         {
-            if (HPBar == null)
-                return null;
-            return HPBar.transform.Find("HPCurrent").gameObject.GetComponent<Image>();
+            if (_hpBarCurrent == null)
+            {
+                if (HPBar == null)
+                    return null;
+                _hpBarCurrent = HPBar.transform.Find("HPCurrent").gameObject.GetComponent<Image>();
+            }
+            return _hpBarCurrent;
         }
     }
+
+    private Image _hPBarDamaging;
     Image HPBarDamaging
     {
         get
         {
-            if (HPBar == null)
-                return null;
-            return HPBar.transform.Find("HPDamaging").gameObject.GetComponent<Image>();
+            if (_hPBarDamaging == null)
+            {
+                if (HPBar == null)
+                    return null;
+                _hPBarDamaging = HPBar.transform.Find("HPDamaging").gameObject.GetComponent<Image>();
+            }
+            return _hPBarDamaging;
         }
     }
+
+    private Image _hPBarDamaged;
     Image HPBarDamaged
     {
         get
         {
-            if (HPBar == null)
-                return null;
-            return HPBar.transform.Find("HPDamaged").gameObject.GetComponent<Image>();
+            if (_hPBarDamaged == null)
+            {
+                if (HPBar == null)
+                    return null;
+                _hPBarDamaged = HPBar.transform.Find("HPDamaged").gameObject.GetComponent<Image>();
+            }
+            return _hPBarDamaged;
         }
     }
+
+    private Image _aPBase;
     Image APBase
     {
         get
         {
-            return transform.Find("APBase").GetComponent<Image>();
+            if (_aPBase == null)
+                _aPBase = transform.Find("APBase").GetComponent<Image>();
+
+            return _aPBase;
         }
     }
+
+    private Image _aPFill;
     Image APFill
     {
         get
         {
-            if (APBase == null)
-                return null;
-            return APBase.transform.Find("APFill").GetComponent<Image>();
+            if (_aPFill == null)
+            {
+                if (APBase == null)
+                    return null;
+                _aPFill = APBase.transform.Find("APFill").GetComponent<Image>();
+            }
+            return _aPFill;
         }
     }
+
+    private TextMeshProUGUI _hPText;
     TextMeshProUGUI HPText
     {
         get
         {
-            return transform.Find("HPText").gameObject.GetComponent<TextMeshProUGUI>();
+            if (_hPText = null)
+                _hPText = transform.Find("HPText").gameObject.GetComponent<TextMeshProUGUI>();
+            return _hPText;
         }
     }
     #endregion
@@ -115,6 +147,9 @@ public class CharacterGUI : MonoBehaviour
 
     void UpdateAP()
     {
+        if (character == null)
+            return;
+
         int intAP = MathUtility.Truncate(character.APCore.AP_Current).Clamp(0, 10);
         APBase.sprite = ApBaseSprites[intAP];
         APFill.sprite = ApFillSprites[intAP];
@@ -183,6 +218,9 @@ public class CharacterGUI : MonoBehaviour
 
     void SetHPBars()
     {
+        if (character == null)
+            return;
+
         float fillAmount = (float)character.HP_Current / (float)character.HP_Max;
         //current
         if (HPBarCurrent.fillAmount != fillAmount)
