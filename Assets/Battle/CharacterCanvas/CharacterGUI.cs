@@ -112,7 +112,7 @@ public class CharacterGUI : MonoBehaviour
     {
         get
         {
-            if (_hPText = null)
+            if (_hPText == null)
                 _hPText = transform.Find("HPText").gameObject.GetComponent<TextMeshProUGUI>();
             return _hPText;
         }
