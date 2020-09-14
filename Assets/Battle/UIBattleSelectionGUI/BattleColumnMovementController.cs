@@ -71,7 +71,7 @@ public class BattleColumnMovementController
     public void Forward()
     {
         if (Index == Columns.Length)
-            return;
+            return; //TODO: Changed state
         Index++;
 
         Columns[Index].ContentBox.interactable = true;

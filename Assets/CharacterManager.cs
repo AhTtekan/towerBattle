@@ -4,6 +4,8 @@ using UnityEngine.UI;
 
 public class CharacterManager : MonoBehaviour
 {
+    public Inventory Inventory { get; set; }
+
     [SerializeField]
     public Character[] Characters;
 
@@ -22,6 +24,8 @@ public class CharacterManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Inventory = new Inventory();
+
         Characters = new Character[]
         {
             new Character(){CharacterName = "Valdun", HP_Max = 150, HP_Current = 150, characterSprite = characterSprites[0] },
