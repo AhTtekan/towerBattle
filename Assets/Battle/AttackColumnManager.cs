@@ -5,6 +5,6 @@ public class AttackColumnManager : ColumnManager
 {
     public override IEnumerable<IQueueable> GetNextColumnOptions()
     {
-        return new List<AttackAbility>() { new AttackAbility() };
+        return new List<Ability>() { new AttackAbility() };
     }
 }

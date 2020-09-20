@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2173765b56985b240bb4099203483e65, type: 3}
+  m_Name: Cardione
+  m_EditorClassIdentifier: 
+  CharacterName: Cardione
+  HP_Current: 100
+  HP_Max: 100
+  Level: 1
+  characterSprite: {fileID: 21300000, guid: 3c0b40e38f9724e4fb28dc8f5f056ad9, type: 3}
+  Abilities:
+  - {fileID: 11400000, guid: a14eb3b69fa3ae146b1474f7439becd1, type: 2}
+  - {fileID: 11400000, guid: a527c85bd7a6b5046ad615d52a9ab1ab, type: 2}

@@ -1,8 +1,10 @@
-﻿public class Unit
-{
-    public string CharacterName { get; set; }
+﻿using UnityEngine;
 
-    public int HP_Current;// { get; set; }
+public class Unit : ScriptableObject
+{
+    public string CharacterName;
+
+    public int HP_Current;
     public int HP_Max;
 
     public APCore APCore { get; set; } = new APCore();
@@ -11,19 +13,21 @@
 
     public static Unit AllAllies()
     {
-        return new Unit
-        {
-            CharacterName = "All Allies",
-            targetType = TargetTypes.AllAllies
-        };
+        var allAllies = CreateInstance<Unit>();
+
+        allAllies.CharacterName = "All Allies";
+        allAllies.targetType = TargetTypes.AllAllies;
+
+        return allAllies;
     }
 
     public static Unit AllEnemies()
     {
-        return new Unit
-        {
-            CharacterName = "All Enemies",
-            targetType = TargetTypes.AllEnemies
-        };
+        var allEnemies = CreateInstance<Unit>();
+
+        allEnemies.CharacterName = "All Enemies";
+        allEnemies.targetType = TargetTypes.AllEnemies;
+
+        return allEnemies;
     }
 }

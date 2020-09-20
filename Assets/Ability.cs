@@ -1,7 +1,47 @@
-﻿public class Ability : IQueueable
+﻿using UnityEngine;
+
+[CreateAssetMenu(fileName = "Data", menuName = "ScriptableObjects/Ability", order = 2)]
+public class Ability : ScriptableObject, IQueueable
 {
-    public virtual int LevelLearned { get; }
-    public virtual string Name { get; set; }
-    public virtual int APCost { get; }
-    public virtual TargetTypes TargetType { get; set; }
+    public int levelLearned;
+    public virtual int LevelLearned
+    {
+        get
+        {
+            return levelLearned;
+        }
+        set
+        {
+            levelLearned = value;
+        }
+    }
+
+    public string name;
+    public virtual string Name
+    {
+        get
+        {
+            return name;
+        }
+        set
+        {
+            name = value;
+        }
+    }
+
+    public int apCost;
+    public virtual int APCost { get { return apCost; } }
+
+    public TargetTypes targetType;
+    public virtual TargetTypes TargetType
+    {
+        get
+        {
+            return targetType;
+        }
+        set
+        {
+            targetType = value;
+        }
+    }
 }

@@ -4340,11 +4340,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e0deadf71117d54fa3ca26687d9ae82, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  characterSprites:
-  - {fileID: 21300000, guid: 5312c9b34541ddd4f8bd451c15ee0fb1, type: 3}
-  - {fileID: 21300000, guid: 13ad65785e7d3374cbca73d2fa36f1d0, type: 3}
-  - {fileID: 21300000, guid: 3060d0b25c024234a9199e290c36a225, type: 3}
-  - {fileID: 21300000, guid: 3c0b40e38f9724e4fb28dc8f5f056ad9, type: 3}
+  Characters:
+  - {fileID: 11400000, guid: 8b907f1ef709e7345845f07c098f567d, type: 2}
+  - {fileID: 11400000, guid: 1be95ae45c82ed14780f820dabfb4b9a, type: 2}
+  - {fileID: 11400000, guid: 97ee19e5270c1e642be75d0eafda22b8, type: 2}
+  - {fileID: 11400000, guid: c9728ef4a3d9d8848a93036c2bbfb975, type: 2}
 --- !u!4 &1586865494
 Transform:
   m_ObjectHideFlags: 0

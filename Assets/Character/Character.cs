@@ -2,27 +2,14 @@
 using System.Linq;
 using UnityEngine;
 
-//TODO: make this abstract after testing
+[CreateAssetMenu(fileName = "Data", menuName = "ScriptableObjects/Character", order = 1)]
 public class Character : Unit
 {
-    public int Level { get; set; }
+    public int Level;
 
-    public Sprite characterSprite { get; set; }
+    public Sprite characterSprite;
 
-    //TODO: Test Data
-    public IEnumerable<Ability> Abilities { get; set; }
-    = new List<Ability>() {
-        new Ability
-        {
-            Name = "Lightning",
-            TargetType = TargetTypes.Enemy
-        },
-        new Ability
-        {
-            Name = "Heal",
-            TargetType = TargetTypes.Ally
-        }
-    };
+    public Ability[] Abilities;
 
     public IEnumerable<Ability> LearnedAbilities
     {
