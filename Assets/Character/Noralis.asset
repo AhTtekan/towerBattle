@@ -9,11 +9,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2173765b56985b240bb4099203483e65, type: 3}
+  m_Script: {fileID: 11500000, guid: caa3509cf7f9f114691fcd60bec5f11b, type: 3}
   m_Name: Noralis
   m_EditorClassIdentifier: 
   CharacterName: Noralis
-  HP_Current: 120
-  HP_Max: 120
+  HP_Current: 170
+  HP_Max: 170
   Level: 1
   characterSprite: {fileID: 21300000, guid: 3060d0b25c024234a9199e290c36a225, type: 3}
+  Abilities: []

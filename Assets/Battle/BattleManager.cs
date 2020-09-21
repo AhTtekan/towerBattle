@@ -5,26 +5,14 @@ public class BattleManager : MonoBehaviour
 {
     public Transform CharacterGUIPrefab;
 
-    public IEnumerable<Unit> Enemies { get; set; }
+    public Encounter Encounter;
+
+    //public IEnumerable<Unit> Enemies { get; set; }
 
     // Start is called before the first frame update
     void Start()
     {
         BuildCharacterGUIs();
-
-        Enemies = new List<Unit>()
-        {
-            new Unit
-            {
-                CharacterName = "Slime",
-                targetType = TargetTypes.Enemy
-            },
-            new Unit
-            {
-                CharacterName = "Chicken",
-                targetType = TargetTypes.Enemy
-            }
-        };
     }
 
     private void BuildCharacterGUIs()

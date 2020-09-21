@@ -5,6 +5,6 @@ public class DefendColumnManager : ColumnManager
 {
     public override IEnumerable<IQueueable> GetNextColumnOptions()
     {
-        return new[] { new DefendAbility() };
+        return new[] { ScriptableObject.CreateInstance<DefendAbility>() };
     }
 }

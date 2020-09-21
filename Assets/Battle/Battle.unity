@@ -4344,7 +4344,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 8b907f1ef709e7345845f07c098f567d, type: 2}
   - {fileID: 11400000, guid: 1be95ae45c82ed14780f820dabfb4b9a, type: 2}
   - {fileID: 11400000, guid: 97ee19e5270c1e642be75d0eafda22b8, type: 2}
-  - {fileID: 11400000, guid: c9728ef4a3d9d8848a93036c2bbfb975, type: 2}
+  - {fileID: 11400000, guid: 378b27fe3f6eb9b44a645cf37a3e10e9, type: 2}
 --- !u!4 &1586865494
 Transform:
   m_ObjectHideFlags: 0
@@ -5588,6 +5588,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CharacterGUIPrefab: {fileID: 224561046449290300, guid: 067f1ce8de1a1b34190b4cd70a86ec72,
     type: 3}
+  Encounter: {fileID: 11400000, guid: 98e3d1f3ec67d234e8c08a5a4d7eb858, type: 2}
 --- !u!1 &2001247455
 GameObject:
   m_ObjectHideFlags: 0

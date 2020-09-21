@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: caa3509cf7f9f114691fcd60bec5f11b, type: 3}
-  m_Name: Cardione
+  m_Name: Magisel
   m_EditorClassIdentifier: 
-  CharacterName: Cardione
-  HP_Current: 150
-  HP_Max: 150
+  CharacterName: Magisel
+  HP_Current: 100
+  HP_Max: 100
   Level: 1
-  characterSprite: {fileID: 21300000, guid: 3c0b40e38f9724e4fb28dc8f5f056ad9, type: 3}
+  characterSprite: {fileID: 21300000, guid: 3060d0b25c024234a9199e290c36a225, type: 3}
   Abilities: []

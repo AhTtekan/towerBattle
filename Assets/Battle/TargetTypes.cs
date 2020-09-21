@@ -32,7 +32,7 @@ public static class TargetTypesExtensions
                     Unit.AllAllies()
                 };
             case TargetTypes.Enemy:
-                return battleManager.Enemies;
+                return battleManager.Encounter.Enemies;
             case TargetTypes.AllEnemies:
                 return new[]
                 {

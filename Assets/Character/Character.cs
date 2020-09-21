@@ -2,8 +2,7 @@
 using System.Linq;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "Data", menuName = "ScriptableObjects/Character", order = 1)]
-public class Character : Unit
+public abstract class Character : Unit
 {
     public int Level;
 

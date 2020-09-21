@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class Unit : ScriptableObject
+public abstract class Unit : ScriptableObject
 {
     public string CharacterName;
 
@@ -9,7 +9,7 @@ public class Unit : ScriptableObject
 
     public APCore APCore { get; set; } = new APCore();
 
-    public TargetTypes targetType { get; set; }
+    public virtual TargetTypes targetType { get; set; }
 
     public static Unit AllAllies()
     {

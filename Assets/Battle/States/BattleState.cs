@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-[CreateAssetMenu(fileName = "BattleState", menuName = "ScriptableObjects/Battle", order = 1)]
+[CreateAssetMenu(fileName = "BattleState", menuName = "ScriptableObjects/BattleState", order = 1)]
 public class BattleState : ScriptableObject
 {
     public string stateName;
