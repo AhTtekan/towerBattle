@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class BattleStateManager : MonoBehaviour
 {
+#pragma warning disable IDE0044 // Add readonly modifier
+#pragma warning disable 0649
     [SerializeField]
     private BattleState[] battleStates;
     [SerializeField]

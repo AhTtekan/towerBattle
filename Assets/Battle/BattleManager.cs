@@ -1,11 +1,13 @@
-﻿using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class BattleManager : MonoBehaviour
 {
     public Transform CharacterGUIPrefab;
 
     public Encounter Encounter;
+
+    public Sprite[] ApBaseSprites;
+    public Sprite[] ApFillSprites;
 
     //public IEnumerable<Unit> Enemies { get; set; }
 

@@ -16,7 +16,7 @@ public class Ability : ScriptableObject, IQueueable
         }
     }
 
-    public string name;
+    public new string name;
     public virtual string Name
     {
         get

@@ -9,11 +9,9 @@ public class CharacterGUI : MonoBehaviour
     Character character;
 
 #pragma warning disable IDE0044 // Add readonly modifier
+#pragma warning disable 0649
     [SerializeField]
-    private Sprite[] ApBaseSprites;
-    [SerializeField]
-    private Sprite[] ApFillSprites;
-#pragma warning restore IDE0044 // Add readonly modifier
+    private BattleManager battleManager;
 
     #region Accessors
     GameObject HPBar
@@ -170,8 +168,8 @@ public class CharacterGUI : MonoBehaviour
             return;
 
         int intAP = MathUtility.Truncate(character.APCore.AP_Current).Clamp(0, 10);
-        APBase.sprite = ApBaseSprites[intAP];
-        APFill.sprite = ApFillSprites[intAP];
+        APBase.sprite = battleManager.ApBaseSprites[intAP];
+        APFill.sprite = battleManager.ApFillSprites[intAP];
 
         if (intAP > 0)
         {

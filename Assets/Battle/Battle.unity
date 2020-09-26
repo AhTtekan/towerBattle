@@ -908,6 +908,153 @@ PrefabInstance:
       propertyPath: m_Color.a
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114693119597385278, guid: 067f1ce8de1a1b34190b4cd70a86ec72,
+        type: 3}
+      propertyPath: ApFillSprites.Array.size
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 114693119597385278, guid: 067f1ce8de1a1b34190b4cd70a86ec72,
+        type: 3}
+      propertyPath: ApBaseSprites.Array.size
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 114693119597385278, guid: 067f1ce8de1a1b34190b4cd70a86ec72,
+        type: 3}
+      propertyPath: ApFillSprites.Array.data[0]
+      value: 
+      objectReference: {fileID: 21300000, guid: 8cea23ce68ebe5842806b51c822df3f6,
+        type: 3}
+    - target: {fileID: 114693119597385278, guid: 067f1ce8de1a1b34190b4cd70a86ec72,
+        type: 3}
+      propertyPath: ApFillSprites.Array.data[1]
+      value: 
+      objectReference: {fileID: 21300000, guid: 9fc1647af9856fa48af231a5eec556ad,
+        type: 3}
+    - target: {fileID: 114693119597385278, guid: 067f1ce8de1a1b34190b4cd70a86ec72,
+        type: 3}
+      propertyPath: ApFillSprites.Array.data[2]
+      value: 
+      objectReference: {fileID: 21300000, guid: 917c5747828f00941ac78f7c60e5538e,
+        type: 3}
+    - target: {fileID: 114693119597385278, guid: 067f1ce8de1a1b34190b4cd70a86ec72,
+        type: 3}
+      propertyPath: ApFillSprites.Array.data[3]
+      value: 
+      objectReference: {fileID: 21300000, guid: 7312090dbbef7cd4bba64d45b21396a8,
+        type: 3}
+    - target: {fileID: 114693119597385278, guid: 067f1ce8de1a1b34190b4cd70a86ec72,
+        type: 3}
+      propertyPath: ApFillSprites.Array.data[4]
+      value: 
+      objectReference: {fileID: 21300000, guid: 0e7ce6a781838284ca7527c07c084607,
+        type: 3}
+    - target: {fileID: 114693119597385278, guid: 067f1ce8de1a1b34190b4cd70a86ec72,
+        type: 3}
+      propertyPath: ApFillSprites.Array.data[5]
+      value: 
+      objectReference: {fileID: 21300000, guid: de20dcf0dcdf9de4fb2d29e6662e69af,
+        type: 3}
+    - target: {fileID: 114693119597385278, guid: 067f1ce8de1a1b34190b4cd70a86ec72,
+        type: 3}
+      propertyPath: ApFillSprites.Array.data[6]
+      value: 
+      objectReference: {fileID: 21300000, guid: bb0a30be8352263459b8398319133a9b,
+        type: 3}
+    - target: {fileID: 114693119597385278, guid: 067f1ce8de1a1b34190b4cd70a86ec72,
+        type: 3}
+      propertyPath: ApFillSprites.Array.data[7]
+      value: 
+      objectReference: {fileID: 21300000, guid: a93a4424b12b0ed4b9cde5a5acbcb331,
+        type: 3}
+    - target: {fileID: 114693119597385278, guid: 067f1ce8de1a1b34190b4cd70a86ec72,
+        type: 3}
+      propertyPath: ApFillSprites.Array.data[8]
+      value: 
+      objectReference: {fileID: 21300000, guid: 8657a51e16b672d41a6306a85c28082a,
+        type: 3}
+    - target: {fileID: 114693119597385278, guid: 067f1ce8de1a1b34190b4cd70a86ec72,
+        type: 3}
+      propertyPath: ApFillSprites.Array.data[9]
+      value: 
+      objectReference: {fileID: 21300000, guid: d4d321af904f0c84e8889adc70f69a9f,
+        type: 3}
+    - target: {fileID: 114693119597385278, guid: 067f1ce8de1a1b34190b4cd70a86ec72,
+        type: 3}
+      propertyPath: ApFillSprites.Array.data[10]
+      value: 
+      objectReference: {fileID: 21300000, guid: fbe4379fd488c2d4ba8ae7117fab5764,
+        type: 3}
+    - target: {fileID: 114693119597385278, guid: 067f1ce8de1a1b34190b4cd70a86ec72,
+        type: 3}
+      propertyPath: ApBaseSprites.Array.data[0]
+      value: 
+      objectReference: {fileID: 21300000, guid: 9da816d34caa8814d8638990d8d0f93a,
+        type: 3}
+    - target: {fileID: 114693119597385278, guid: 067f1ce8de1a1b34190b4cd70a86ec72,
+        type: 3}
+      propertyPath: ApBaseSprites.Array.data[1]
+      value: 
+      objectReference: {fileID: 21300000, guid: c7e3cc24b3db9fc429565b9c75b5bbee,
+        type: 3}
+    - target: {fileID: 114693119597385278, guid: 067f1ce8de1a1b34190b4cd70a86ec72,
+        type: 3}
+      propertyPath: ApBaseSprites.Array.data[2]
+      value: 
+      objectReference: {fileID: 21300000, guid: 9b65f312d468bdd4ab6c4c354dbb0db7,
+        type: 3}
+    - target: {fileID: 114693119597385278, guid: 067f1ce8de1a1b34190b4cd70a86ec72,
+        type: 3}
+      propertyPath: ApBaseSprites.Array.data[3]
+      value: 
+      objectReference: {fileID: 21300000, guid: 9a1c19888efeaef4c9cd44b6ca4444bf,
+        type: 3}
+    - target: {fileID: 114693119597385278, guid: 067f1ce8de1a1b34190b4cd70a86ec72,
+        type: 3}
+      propertyPath: ApBaseSprites.Array.data[4]
+      value: 
+      objectReference: {fileID: 21300000, guid: 041901852f00bdb4d9b264b27f260486,
+        type: 3}
+    - target: {fileID: 114693119597385278, guid: 067f1ce8de1a1b34190b4cd70a86ec72,
+        type: 3}
+      propertyPath: ApBaseSprites.Array.data[5]
+      value: 
+      objectReference: {fileID: 21300000, guid: 1733e480817fb95498367206cf60596e,
+        type: 3}
+    - target: {fileID: 114693119597385278, guid: 067f1ce8de1a1b34190b4cd70a86ec72,
+        type: 3}
+      propertyPath: ApBaseSprites.Array.data[6]
+      value: 
+      objectReference: {fileID: 21300000, guid: 3f0dc86076d9912478793c0ed8ee0e00,
+        type: 3}
+    - target: {fileID: 114693119597385278, guid: 067f1ce8de1a1b34190b4cd70a86ec72,
+        type: 3}
+      propertyPath: ApBaseSprites.Array.data[7]
+      value: 
+      objectReference: {fileID: 21300000, guid: e0b49f6c7b011d54da0be60749fa1a01,
+        type: 3}
+    - target: {fileID: 114693119597385278, guid: 067f1ce8de1a1b34190b4cd70a86ec72,
+        type: 3}
+      propertyPath: ApBaseSprites.Array.data[8]
+      value: 
+      objectReference: {fileID: 21300000, guid: 5f3fa95c07203b54fbd110f12d172191,
+        type: 3}
+    - target: {fileID: 114693119597385278, guid: 067f1ce8de1a1b34190b4cd70a86ec72,
+        type: 3}
+      propertyPath: ApBaseSprites.Array.data[9]
+      value: 
+      objectReference: {fileID: 21300000, guid: 814c3b67f496aa14c8f616f95fa5913b,
+        type: 3}
+    - target: {fileID: 114693119597385278, guid: 067f1ce8de1a1b34190b4cd70a86ec72,
+        type: 3}
+      propertyPath: ApBaseSprites.Array.data[10]
+      value: 
+      objectReference: {fileID: 21300000, guid: dc10d5a530bc86344b9fff89a66e6620,
+        type: 3}
+    - target: {fileID: 114693119597385278, guid: 067f1ce8de1a1b34190b4cd70a86ec72,
+        type: 3}
+      propertyPath: battleManager
+      value: 
+      objectReference: {fileID: 1981092986}
     - target: {fileID: 224561046449290300, guid: 067f1ce8de1a1b34190b4cd70a86ec72,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3349,30 +3496,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9f507c46411e954995810f3600a578f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ApBaseSprites:
-  - {fileID: 21300000, guid: 9da816d34caa8814d8638990d8d0f93a, type: 3}
-  - {fileID: 21300000, guid: c7e3cc24b3db9fc429565b9c75b5bbee, type: 3}
-  - {fileID: 21300000, guid: 9b65f312d468bdd4ab6c4c354dbb0db7, type: 3}
-  - {fileID: 21300000, guid: 9a1c19888efeaef4c9cd44b6ca4444bf, type: 3}
-  - {fileID: 21300000, guid: 041901852f00bdb4d9b264b27f260486, type: 3}
-  - {fileID: 21300000, guid: 1733e480817fb95498367206cf60596e, type: 3}
-  - {fileID: 21300000, guid: 3f0dc86076d9912478793c0ed8ee0e00, type: 3}
-  - {fileID: 21300000, guid: e0b49f6c7b011d54da0be60749fa1a01, type: 3}
-  - {fileID: 21300000, guid: 5f3fa95c07203b54fbd110f12d172191, type: 3}
-  - {fileID: 21300000, guid: 814c3b67f496aa14c8f616f95fa5913b, type: 3}
-  - {fileID: 21300000, guid: dc10d5a530bc86344b9fff89a66e6620, type: 3}
-  ApFillSprites:
-  - {fileID: 21300000, guid: 8cea23ce68ebe5842806b51c822df3f6, type: 3}
-  - {fileID: 21300000, guid: 9fc1647af9856fa48af231a5eec556ad, type: 3}
-  - {fileID: 21300000, guid: 917c5747828f00941ac78f7c60e5538e, type: 3}
-  - {fileID: 21300000, guid: 7312090dbbef7cd4bba64d45b21396a8, type: 3}
-  - {fileID: 21300000, guid: 0e7ce6a781838284ca7527c07c084607, type: 3}
-  - {fileID: 21300000, guid: de20dcf0dcdf9de4fb2d29e6662e69af, type: 3}
-  - {fileID: 21300000, guid: bb0a30be8352263459b8398319133a9b, type: 3}
-  - {fileID: 21300000, guid: a93a4424b12b0ed4b9cde5a5acbcb331, type: 3}
-  - {fileID: 21300000, guid: 8657a51e16b672d41a6306a85c28082a, type: 3}
-  - {fileID: 21300000, guid: d4d321af904f0c84e8889adc70f69a9f, type: 3}
-  - {fileID: 21300000, guid: fbe4379fd488c2d4ba8ae7117fab5764, type: 3}
+  battleManager: {fileID: 1981092986}
 --- !u!1 &1214467953
 GameObject:
   m_ObjectHideFlags: 0
@@ -3595,30 +3719,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9f507c46411e954995810f3600a578f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ApBaseSprites:
-  - {fileID: 21300000, guid: 9da816d34caa8814d8638990d8d0f93a, type: 3}
-  - {fileID: 21300000, guid: c7e3cc24b3db9fc429565b9c75b5bbee, type: 3}
-  - {fileID: 21300000, guid: 9b65f312d468bdd4ab6c4c354dbb0db7, type: 3}
-  - {fileID: 21300000, guid: 9a1c19888efeaef4c9cd44b6ca4444bf, type: 3}
-  - {fileID: 21300000, guid: 041901852f00bdb4d9b264b27f260486, type: 3}
-  - {fileID: 21300000, guid: 1733e480817fb95498367206cf60596e, type: 3}
-  - {fileID: 21300000, guid: 3f0dc86076d9912478793c0ed8ee0e00, type: 3}
-  - {fileID: 21300000, guid: e0b49f6c7b011d54da0be60749fa1a01, type: 3}
-  - {fileID: 21300000, guid: 5f3fa95c07203b54fbd110f12d172191, type: 3}
-  - {fileID: 21300000, guid: 814c3b67f496aa14c8f616f95fa5913b, type: 3}
-  - {fileID: 21300000, guid: dc10d5a530bc86344b9fff89a66e6620, type: 3}
-  ApFillSprites:
-  - {fileID: 21300000, guid: 8cea23ce68ebe5842806b51c822df3f6, type: 3}
-  - {fileID: 21300000, guid: 9fc1647af9856fa48af231a5eec556ad, type: 3}
-  - {fileID: 21300000, guid: 917c5747828f00941ac78f7c60e5538e, type: 3}
-  - {fileID: 21300000, guid: 7312090dbbef7cd4bba64d45b21396a8, type: 3}
-  - {fileID: 21300000, guid: 0e7ce6a781838284ca7527c07c084607, type: 3}
-  - {fileID: 21300000, guid: de20dcf0dcdf9de4fb2d29e6662e69af, type: 3}
-  - {fileID: 21300000, guid: bb0a30be8352263459b8398319133a9b, type: 3}
-  - {fileID: 21300000, guid: a93a4424b12b0ed4b9cde5a5acbcb331, type: 3}
-  - {fileID: 21300000, guid: 8657a51e16b672d41a6306a85c28082a, type: 3}
-  - {fileID: 21300000, guid: d4d321af904f0c84e8889adc70f69a9f, type: 3}
-  - {fileID: 21300000, guid: fbe4379fd488c2d4ba8ae7117fab5764, type: 3}
+  battleManager: {fileID: 1981092986}
 --- !u!1 &1384443217
 GameObject:
   m_ObjectHideFlags: 0
@@ -5630,9 +5731,9 @@ MonoBehaviour:
   battleStates:
   - {fileID: 11400000, guid: 98e5638ac215806469dd544bc5b4e9c7, type: 2}
   - {fileID: 11400000, guid: 88d099b488c3e64479a6a2ae5aa60ee5, type: 2}
+  - {fileID: 11400000, guid: 07c28271958500248b53c0e0259280e3, type: 2}
   - {fileID: 11400000, guid: 9b021059720a75249bbf48f1b186a154, type: 2}
   - {fileID: 11400000, guid: 1cb1e14737a665440b9ee334f9295a50, type: 2}
-  - {fileID: 11400000, guid: 07c28271958500248b53c0e0259280e3, type: 2}
   playerInput: {fileID: 1981092983}
   selectionGuiCanvas: {fileID: 625407366}
   eventSystem: {fileID: 1721440922}
@@ -5653,6 +5754,30 @@ MonoBehaviour:
   CharacterGUIPrefab: {fileID: 224561046449290300, guid: 067f1ce8de1a1b34190b4cd70a86ec72,
     type: 3}
   Encounter: {fileID: 11400000, guid: 98e3d1f3ec67d234e8c08a5a4d7eb858, type: 2}
+  ApBaseSprites:
+  - {fileID: 21300000, guid: 9da816d34caa8814d8638990d8d0f93a, type: 3}
+  - {fileID: 21300000, guid: c7e3cc24b3db9fc429565b9c75b5bbee, type: 3}
+  - {fileID: 21300000, guid: 9b65f312d468bdd4ab6c4c354dbb0db7, type: 3}
+  - {fileID: 21300000, guid: 9a1c19888efeaef4c9cd44b6ca4444bf, type: 3}
+  - {fileID: 21300000, guid: 041901852f00bdb4d9b264b27f260486, type: 3}
+  - {fileID: 21300000, guid: 1733e480817fb95498367206cf60596e, type: 3}
+  - {fileID: 21300000, guid: 3f0dc86076d9912478793c0ed8ee0e00, type: 3}
+  - {fileID: 21300000, guid: e0b49f6c7b011d54da0be60749fa1a01, type: 3}
+  - {fileID: 21300000, guid: 5f3fa95c07203b54fbd110f12d172191, type: 3}
+  - {fileID: 21300000, guid: 814c3b67f496aa14c8f616f95fa5913b, type: 3}
+  - {fileID: 21300000, guid: dc10d5a530bc86344b9fff89a66e6620, type: 3}
+  ApFillSprites:
+  - {fileID: 21300000, guid: 8cea23ce68ebe5842806b51c822df3f6, type: 3}
+  - {fileID: 21300000, guid: 9fc1647af9856fa48af231a5eec556ad, type: 3}
+  - {fileID: 21300000, guid: 917c5747828f00941ac78f7c60e5538e, type: 3}
+  - {fileID: 21300000, guid: 7312090dbbef7cd4bba64d45b21396a8, type: 3}
+  - {fileID: 21300000, guid: 0e7ce6a781838284ca7527c07c084607, type: 3}
+  - {fileID: 21300000, guid: de20dcf0dcdf9de4fb2d29e6662e69af, type: 3}
+  - {fileID: 21300000, guid: bb0a30be8352263459b8398319133a9b, type: 3}
+  - {fileID: 21300000, guid: a93a4424b12b0ed4b9cde5a5acbcb331, type: 3}
+  - {fileID: 21300000, guid: 8657a51e16b672d41a6306a85c28082a, type: 3}
+  - {fileID: 21300000, guid: d4d321af904f0c84e8889adc70f69a9f, type: 3}
+  - {fileID: 21300000, guid: fbe4379fd488c2d4ba8ae7117fab5764, type: 3}
 --- !u!1 &2001247455
 GameObject:
   m_ObjectHideFlags: 0
@@ -5780,30 +5905,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9f507c46411e954995810f3600a578f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ApBaseSprites:
-  - {fileID: 21300000, guid: 9da816d34caa8814d8638990d8d0f93a, type: 3}
-  - {fileID: 21300000, guid: c7e3cc24b3db9fc429565b9c75b5bbee, type: 3}
-  - {fileID: 21300000, guid: 9b65f312d468bdd4ab6c4c354dbb0db7, type: 3}
-  - {fileID: 21300000, guid: 9a1c19888efeaef4c9cd44b6ca4444bf, type: 3}
-  - {fileID: 21300000, guid: 041901852f00bdb4d9b264b27f260486, type: 3}
-  - {fileID: 21300000, guid: 1733e480817fb95498367206cf60596e, type: 3}
-  - {fileID: 21300000, guid: 3f0dc86076d9912478793c0ed8ee0e00, type: 3}
-  - {fileID: 21300000, guid: e0b49f6c7b011d54da0be60749fa1a01, type: 3}
-  - {fileID: 21300000, guid: 5f3fa95c07203b54fbd110f12d172191, type: 3}
-  - {fileID: 21300000, guid: 814c3b67f496aa14c8f616f95fa5913b, type: 3}
-  - {fileID: 21300000, guid: dc10d5a530bc86344b9fff89a66e6620, type: 3}
-  ApFillSprites:
-  - {fileID: 21300000, guid: 8cea23ce68ebe5842806b51c822df3f6, type: 3}
-  - {fileID: 21300000, guid: 9fc1647af9856fa48af231a5eec556ad, type: 3}
-  - {fileID: 21300000, guid: 917c5747828f00941ac78f7c60e5538e, type: 3}
-  - {fileID: 21300000, guid: 7312090dbbef7cd4bba64d45b21396a8, type: 3}
-  - {fileID: 21300000, guid: 0e7ce6a781838284ca7527c07c084607, type: 3}
-  - {fileID: 21300000, guid: de20dcf0dcdf9de4fb2d29e6662e69af, type: 3}
-  - {fileID: 21300000, guid: bb0a30be8352263459b8398319133a9b, type: 3}
-  - {fileID: 21300000, guid: a93a4424b12b0ed4b9cde5a5acbcb331, type: 3}
-  - {fileID: 21300000, guid: 8657a51e16b672d41a6306a85c28082a, type: 3}
-  - {fileID: 21300000, guid: d4d321af904f0c84e8889adc70f69a9f, type: 3}
-  - {fileID: 21300000, guid: fbe4379fd488c2d4ba8ae7117fab5764, type: 3}
+  battleManager: {fileID: 1981092986}
 --- !u!1 &2091728064
 GameObject:
   m_ObjectHideFlags: 0
