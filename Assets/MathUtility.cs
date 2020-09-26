@@ -41,10 +41,13 @@ public static class MathUtility
 
 public static class GUIUtility
 {
-    public static void DimGUI(Transform t, float alpha = 0.7f)
+    public static void DimGUI(Transform t, float alpha = 0.7f, bool dimChildren = true)
     {
-        foreach (Transform child in t)
-            DimGUI(child, alpha);
+        if (dimChildren)
+        {
+            foreach (Transform child in t)
+                DimGUI(child, alpha);
+        }
 
         Color co;
         Image im = t.GetComponent<Image>();

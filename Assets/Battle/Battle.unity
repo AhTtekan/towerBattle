@@ -903,6 +903,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: CharacterGUICanvas
       objectReference: {fileID: 0}
+    - target: {fileID: 114530075043762510, guid: 067f1ce8de1a1b34190b4cd70a86ec72,
+        type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 224561046449290300, guid: 067f1ce8de1a1b34190b4cd70a86ec72,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2027,17 +2032,17 @@ PrefabInstance:
     - target: {fileID: 4740297406008632708, guid: 60919da181e978942a2b8f9925554a6f,
         type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4740297406008632708, guid: 60919da181e978942a2b8f9925554a6f,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4740297406008632708, guid: 60919da181e978942a2b8f9925554a6f,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: -2
       objectReference: {fileID: 0}
     - target: {fileID: 4740297406507484218, guid: 60919da181e978942a2b8f9925554a6f,
         type: 3}
@@ -2152,12 +2157,12 @@ PrefabInstance:
     - target: {fileID: 4740297407398091184, guid: 60919da181e978942a2b8f9925554a6f,
         type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4740297407398091184, guid: 60919da181e978942a2b8f9925554a6f,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4740297407398091184, guid: 60919da181e978942a2b8f9925554a6f,
         type: 3}
@@ -2346,7 +2351,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &625407364
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3020,6 +3025,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c367f7797e37e240941c4cbfc5f66be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &900854535 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6441728375136834627, guid: 468326109cd6e244786199e99c0ecd39,
+    type: 3}
+  m_PrefabInstance: {fileID: 1898735990}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 900854531}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &954832136
 GameObject:
   m_ObjectHideFlags: 0
@@ -3133,17 +3150,17 @@ PrefabInstance:
     - target: {fileID: 4740297406008632708, guid: 60919da181e978942a2b8f9925554a6f,
         type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4740297406008632708, guid: 60919da181e978942a2b8f9925554a6f,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4740297406008632708, guid: 60919da181e978942a2b8f9925554a6f,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: -2
       objectReference: {fileID: 0}
     - target: {fileID: 4740297406507484218, guid: 60919da181e978942a2b8f9925554a6f,
         type: 3}
@@ -3258,12 +3275,12 @@ PrefabInstance:
     - target: {fileID: 4740297407398091184, guid: 60919da181e978942a2b8f9925554a6f,
         type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4740297407398091184, guid: 60919da181e978942a2b8f9925554a6f,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4740297407398091184, guid: 60919da181e978942a2b8f9925554a6f,
         type: 3}
@@ -3930,17 +3947,17 @@ PrefabInstance:
     - target: {fileID: 4740297406008632708, guid: 60919da181e978942a2b8f9925554a6f,
         type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4740297406008632708, guid: 60919da181e978942a2b8f9925554a6f,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4740297406008632708, guid: 60919da181e978942a2b8f9925554a6f,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: -2
       objectReference: {fileID: 0}
     - target: {fileID: 4740297406507484218, guid: 60919da181e978942a2b8f9925554a6f,
         type: 3}
@@ -4055,12 +4072,12 @@ PrefabInstance:
     - target: {fileID: 4740297407398091184, guid: 60919da181e978942a2b8f9925554a6f,
         type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4740297407398091184, guid: 60919da181e978942a2b8f9925554a6f,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4740297407398091184, guid: 60919da181e978942a2b8f9925554a6f,
         type: 3}
@@ -4377,6 +4394,7 @@ MonoBehaviour:
   - {fileID: 1034343077}
   GUIButtonPrefab: {fileID: 6441728375136834627, guid: 468326109cd6e244786199e99c0ecd39,
     type: 3}
+  battleStateManager: {fileID: 1981092985}
   UIPopulateColumn:
     m_PersistentCalls:
       m_Calls:
@@ -5430,6 +5448,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1981092985}
+        m_MethodName: SetCharacterGUIActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
     m_ActionId: 75e24bf6-01ae-4e4d-8f89-419a8d2d958f
     m_ActionName: Building/MoveToCharacterSelect
   - m_PersistentCalls:
@@ -5471,6 +5500,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1981092985}
+        m_MethodName: SetCharacterGUIActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
     m_ActionId: 9e9c1c1d-6ea0-45dd-9386-315801025f2f
     m_ActionName: CharacterSelect/CharacterLeft
   - m_PersistentCalls:
@@ -5485,6 +5525,17 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1981092985}
+        m_MethodName: SetCharacterGUIActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
         m_CallState: 2
     m_ActionId: 5b7efe86-3bd9-45e2-89a1-47def14117bf
     m_ActionName: CharacterSelect/CharacterRight
@@ -5501,6 +5552,17 @@ MonoBehaviour:
       - m_Target: {fileID: 1981092985}
         m_MethodName: DecrementBattleState
         m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1981092985}
+        m_MethodName: SetCharacterGUIActive
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -5574,6 +5636,8 @@ MonoBehaviour:
   playerInput: {fileID: 1981092983}
   selectionGuiCanvas: {fileID: 625407366}
   eventSystem: {fileID: 1721440922}
+  characterManager: {fileID: 1586865493}
+  defaultSelectedButton: {fileID: 900854535}
 --- !u!114 &1981092986
 MonoBehaviour:
   m_ObjectHideFlags: 0

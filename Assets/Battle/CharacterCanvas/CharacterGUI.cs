@@ -1,4 +1,4 @@
-﻿using System;
+﻿using System.Linq;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -107,6 +107,19 @@ public class CharacterGUI : MonoBehaviour
         }
     }
 
+    private Image _burst;
+    Image Burst
+    {
+        get
+        {
+            if (_burst == null)
+            {
+                _burst = transform.Find("Burst").GetComponent<Image>();
+            }
+            return _burst;
+        }
+    }
+
     private TextMeshProUGUI _hPText;
     TextMeshProUGUI HPText
     {
@@ -140,9 +153,15 @@ public class CharacterGUI : MonoBehaviour
     public void Dim(Character c)
     {
         if (c == null || c == character)
+        {
             GUIUtility.DimGUI(transform, 1f);
+            GUIUtility.DimGUI(Burst.transform, 1f, false);
+        }
         else
+        {
             GUIUtility.DimGUI(transform);
+            GUIUtility.DimGUI(Burst.transform, 0f, false);
+        }
     }
 
     void UpdateAP()

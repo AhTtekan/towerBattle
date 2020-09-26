@@ -45,15 +45,15 @@ public class BattleColumnMovementController
 
     }
 
-    public void Back()
+    public bool Back()
     {
-        Back(true);
+        return Back(true);
     }
 
-    public void Back(bool clearOldContent)
+    public bool Back(bool clearOldContent)
     {
         if (Index == 0)
-            return; //TODO: Changed state
+            return false;
         Index--;
         var column = Columns[Index];
         if (column.LastSelectedButton != null)
@@ -66,6 +66,8 @@ public class BattleColumnMovementController
             column.LastSelectedButton.GetComponent<IUIAccentuate>().ResetAccent();
             column.LastSelectedButton = null;
         }
+
+        return true;
     }
 
     public void Forward()

@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 
 public class BattleStateManager : MonoBehaviour
 {
@@ -12,6 +13,10 @@ public class BattleStateManager : MonoBehaviour
     private Canvas selectionGuiCanvas;
     [SerializeField]
     private EventSystem eventSystem;
+    [SerializeField]
+    private CharacterManager characterManager;
+    [SerializeField]
+    private Button defaultSelectedButton;
 
     private BattleState currentState;
 
@@ -73,5 +78,20 @@ public class BattleStateManager : MonoBehaviour
     {
         selectionGuiCanvas.gameObject.SetActive(active);
         eventSystem.gameObject.SetActive(active);
+        if (active)
+        {
+            eventSystem.SetSelectedGameObject(defaultSelectedButton.gameObject);
+            defaultSelectedButton.Select();
+            eventSystem.SetSelectedGameObject(null);
+        }
+    }
+
+    public void SetCharacterGUIActive(bool active)
+    {
+        var character = active ? characterManager.SelectedCharacter : ScriptableObject.CreateInstance<PartyMember>();
+        foreach(var gui in GameObject.FindObjectsOfType<CharacterGUI>())
+        {
+            gui.Dim(character);
+        }
     }
 }

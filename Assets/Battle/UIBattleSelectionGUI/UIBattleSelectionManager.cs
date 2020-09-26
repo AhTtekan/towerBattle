@@ -14,6 +14,8 @@ public class UIBattleSelectionManager : MonoBehaviour
     private CanvasGroup[] ColumnContents;
     [SerializeField]
     private Button GUIButtonPrefab;
+    [SerializeField]
+    private BattleStateManager battleStateManager;
 #pragma warning restore 0649
 
     //TODO: Make this private again
@@ -56,9 +58,13 @@ public class UIBattleSelectionManager : MonoBehaviour
 
     public void Back(InputAction.CallbackContext callbackContext)
     {
-        if (!callbackContext.performed)
+        if (!callbackContext.started)
             return;
-        _battleColumnController.Back();
+        if (!_battleColumnController.Back())
+        {
+            battleStateManager.DecrementBattleState(callbackContext);
+            battleStateManager.SetSelectionGUIActive(false);
+        }
     }
 
     private RectTransform GenerateNewButton(int i, IQueueable queueable, Transform contentBox)
