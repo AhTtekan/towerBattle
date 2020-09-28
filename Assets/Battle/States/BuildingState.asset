@@ -16,3 +16,4 @@ MonoBehaviour:
   InputMapName: Building
   nextState: {fileID: 11400000, guid: 88d099b488c3e64479a6a2ae5aa60ee5, type: 2}
   previousState: {fileID: 11400000}
+  BuildAP: 1

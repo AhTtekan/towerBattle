@@ -7,4 +7,5 @@ public class BattleState : ScriptableObject
     public string InputMapName;
     public BattleState nextState;
     public BattleState previousState;
+    public bool BuildAP;
 }

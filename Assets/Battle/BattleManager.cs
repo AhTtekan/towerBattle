@@ -26,7 +26,7 @@ public class BattleManager : MonoBehaviour
         {
             if (i >= characters.Length)
             {
-                guis[i].enabled = false;
+                guis[i].gameObject.SetActive(false);
 
                 continue;
             }

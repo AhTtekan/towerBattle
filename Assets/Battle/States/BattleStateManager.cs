@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
@@ -21,6 +22,7 @@ public class BattleStateManager : MonoBehaviour
     private Button defaultSelectedButton;
 
     private BattleState currentState;
+    private APRateCalculator[] _calculators;
 
     void Start()
     {
@@ -28,6 +30,31 @@ public class BattleStateManager : MonoBehaviour
         playerInput.SwitchCurrentActionMap(currentState.InputMapName);
         Debug.Log($"State initialized to {currentState.stateName}");
         Debug.Log($"Map: {playerInput.currentActionMap.name}");
+        StartCalculators();
+        SetStartingAP();
+    }
+
+    private void SetStartingAP()
+    {
+        //TODO: Possible addition of states where battle starts with characters at more than 0?
+
+        foreach (var character in characterManager.Characters)
+            character.APCore.AP_Current = 0;
+    }
+
+    private void StartCalculators()
+    {
+        _calculators = new APRateCalculator[characterManager.Characters.Length];
+
+        int i = 0;
+        foreach (var character in characterManager.Characters)
+        {
+            _calculators[i] = new APRateCalculator(character.APCore, character.SpeedCore);
+
+            StartCoroutine(_calculators[i].Increment());
+
+            i++;
+        }
     }
 
     //TODO: Debug crap here, remove
