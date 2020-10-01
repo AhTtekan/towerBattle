@@ -1,7 +1,7 @@
 ﻿[System.Serializable]
 public class APCore
 {
-    public int APBuildRateInSeconds { get; set; }
+    //public int APBuildRateInSeconds;// { get; set; }
 
     public float AP_Current
     {
@@ -16,5 +16,5 @@ public class APCore
     }
     private float ap_Current;
 
-    public float AP_Max { get; set; }
+    public float AP_Max => 10f;
 }

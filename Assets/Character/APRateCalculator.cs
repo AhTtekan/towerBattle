@@ -7,10 +7,11 @@ public class APRateCalculator
     private readonly APCore _characterAPCore;
     private readonly SpeedCore _characterSpeedCore;
 
-    public APRateCalculator(APCore characterAPCore, SpeedCore speedCore)
+    public APRateCalculator(APCore characterAPCore, SpeedCore speedCore, bool kill = false)
     {
         _characterAPCore = characterAPCore;
         _characterSpeedCore = speedCore;
+        _kill = kill;
     }
 
     public float GetIncrementAmount()
@@ -21,9 +22,9 @@ public class APRateCalculator
         return 1f / (amount / 5.6f);
     }
 
-    public void Kill()
+    public void Kill(bool kill)
     {
-        _kill = true;
+        _kill = kill;
     }
 
     public IEnumerator Increment()
@@ -46,5 +47,5 @@ public class APRateCalculator
         yield return null;
     }
 
-    private bool _kill = false;
+    private bool _kill = true;
 }

@@ -49,7 +49,7 @@ public class BattleStateManager : MonoBehaviour
         int i = 0;
         foreach (var character in characterManager.Characters)
         {
-            _calculators[i] = new APRateCalculator(character.APCore, character.SpeedCore);
+            _calculators[i] = new APRateCalculator(character.APCore, character.SpeedCore, !currentState.BuildAP);
 
             StartCoroutine(_calculators[i].Increment());
 
@@ -77,6 +77,8 @@ public class BattleStateManager : MonoBehaviour
         playerInput.SwitchCurrentActionMap(currentState.InputMapName);
         Debug.Log($"State incremented to {currentState.stateName}");
         Debug.Log($"Map: {playerInput.currentActionMap.name}");
+
+        SetCalculators();
     }
 
     public void DecrementBattleState(InputAction.CallbackContext callbackContext)
@@ -87,6 +89,8 @@ public class BattleStateManager : MonoBehaviour
         playerInput.SwitchCurrentActionMap(currentState.InputMapName);
         Debug.Log($"State decremented to {currentState.stateName}");
         Debug.Log($"Map: {playerInput.currentActionMap.name}");
+
+        SetCalculators();
     }
 
     public void ActivateSelectionGUI(InputAction.CallbackContext callbackContext)
@@ -118,9 +122,18 @@ public class BattleStateManager : MonoBehaviour
     public void SetCharacterGUIActive(bool active)
     {
         var character = active ? characterManager.SelectedCharacter : ScriptableObject.CreateInstance<PartyMember>();
-        foreach(var gui in GameObject.FindObjectsOfType<CharacterGUI>())
+        foreach (var gui in GameObject.FindObjectsOfType<CharacterGUI>())
         {
             gui.Dim(character);
         }
     }
+
+    private void SetCalculators()
+    {
+        foreach (var calc in _calculators)
+        {
+            calc.Kill(!currentState.BuildAP);
+        }
+    }
+
 }

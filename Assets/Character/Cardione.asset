@@ -15,6 +15,10 @@ MonoBehaviour:
   CharacterName: Cardione
   HP_Current: 150
   HP_Max: 150
+  APCore:
+    APBuildRateInSeconds: 10
+  SpeedCore:
+    Agility: 25
   Level: 1
   characterSprite: {fileID: 21300000, guid: 3c0b40e38f9724e4fb28dc8f5f056ad9, type: 3}
   Abilities: []

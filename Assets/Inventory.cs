@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using UnityEngine;
 
 public interface IInventory
 {
@@ -30,42 +31,54 @@ public class Inventory : IInventory
 
     public Inventory()
     {
+        var testItems = GetTestData();
+        foreach (var testItem in testItems)
+        {
+            AddItem(testItem);
+        }
+    }
+
+    public IEnumerable<Item> GetTestData()
+    {
+        List<Item> result = new List<Item>();
         //TODO: Test data
-        inventoryItems.Add(new BattleItem
-        {
-            Name = "Potion",
-            TargetType = TargetTypes.Ally
-        }, 1);
-        inventoryItems.Add(new BattleItem
-        {
-                Name = "Hi Potion",
-                TargetType = TargetTypes.Ally
-        }, 1);
-        inventoryItems.Add(new BattleItem
-        {
-                Name = "Elixir",
-                TargetType = TargetTypes.Ally
-        }, 1);
-        inventoryItems.Add(new BattleItem
-        {
-                Name = "Phoenix Down",
-                TargetType = TargetTypes.Ally
-        }, 1);
-        inventoryItems.Add(new BattleItem
-        {
-                Name = "Potion",
-                TargetType = TargetTypes.Ally
-        }, 1);
-        inventoryItems.Add(new BattleItem
-        {
-                Name = "Fire Bomb",
-                TargetType = TargetTypes.AllEnemies
-        }, 1);
-        inventoryItems.Add(new BattleItem
-        {
-                Name = "Restore",
-                TargetType = TargetTypes.Ally
-        }, 1);
+
+        var i1 = ScriptableObject.CreateInstance<BattleItem>();
+        i1.Name = "Potion";
+        i1.TargetType = TargetTypes.Ally;
+        result.Add(i1);
+
+        var i2 = ScriptableObject.CreateInstance<BattleItem>();
+        i1.Name = "Hi Potion";
+        i1.TargetType = TargetTypes.Ally;
+        result.Add(i2);
+
+        var i3 = ScriptableObject.CreateInstance<BattleItem>();
+        i1.Name = "Elixir";
+        i1.TargetType = TargetTypes.Ally;
+        result.Add(i3);
+
+        var i4 = ScriptableObject.CreateInstance<BattleItem>();
+        i1.Name = "Phoenix Down";
+        i1.TargetType = TargetTypes.Ally;
+        result.Add(i4);
+
+        var i5 = ScriptableObject.CreateInstance<BattleItem>();
+        i1.Name = "Potion";
+        i1.TargetType = TargetTypes.Ally;
+        result.Add(i5);
+
+        var i6 = ScriptableObject.CreateInstance<BattleItem>();
+        i1.Name = "Fire Bomb";
+        i1.TargetType = TargetTypes.AllEnemies;
+        result.Add(i6);
+
+        var i7 = ScriptableObject.CreateInstance<BattleItem>();
+        i1.Name = "Restore";
+        i1.TargetType = TargetTypes.Ally;
+        result.Add(i7);
+
+        return result;
     }
 
     public void AddItem(Item item)
@@ -114,7 +127,7 @@ public class Inventory : IInventory
 
     public void UnlockAllItems()
     {
-        foreach(var item in lockedItems.Keys.ToList())
+        foreach (var item in lockedItems.Keys.ToList())
         {
             UnlockItem(item);
         }

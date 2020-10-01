@@ -8,10 +8,9 @@ public abstract class Unit : ScriptableObject
     public int HP_Current;
     public int HP_Max;
 
-    //TODO: Makes these show up in inspector: will need a customPropertyDrawer for it
-    public APCore APCore { get; set; } = new APCore() { APBuildRateInSeconds = 10, AP_Max = 10 };
+    public APCore APCore;// { get; set; } = new APCore() { APBuildRateInSeconds = 10, AP_Max = 10 };
 
-    public SpeedCore SpeedCore { get; set; } = new SpeedCore() { Agility = 25 };
+    public SpeedCore SpeedCore;// { get; set; } = new SpeedCore() { Agility = 25 };
 
     public virtual TargetTypes targetType { get; set; }
 
