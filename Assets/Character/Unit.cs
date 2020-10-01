@@ -16,7 +16,7 @@ public abstract class Unit : ScriptableObject
 
     public static Unit AllAllies()
     {
-        var allAllies = CreateInstance<Unit>();
+        var allAllies = CreateInstance<Enemy>();
 
         allAllies.CharacterName = "All Allies";
         allAllies.targetType = TargetTypes.AllAllies;
@@ -26,7 +26,7 @@ public abstract class Unit : ScriptableObject
 
     public static Unit AllEnemies()
     {
-        var allEnemies = CreateInstance<Unit>();
+        var allEnemies = CreateInstance<Enemy>();
 
         allEnemies.CharacterName = "All Enemies";
         allEnemies.targetType = TargetTypes.AllEnemies;

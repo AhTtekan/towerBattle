@@ -33,18 +33,18 @@ public class APRateCalculator
         do
         {
             yield return null;
-
-            _characterAPCore.AP_Current += GetIncrementAmount() * Time.deltaTime;
-
-            if (_characterAPCore.AP_Current == _characterAPCore.AP_Max)
+            if (!_kill)
             {
-                Debug.Log($"Hit {_characterAPCore.AP_Max} AP in {(DateTime.Now - start).TotalSeconds} with Agility = {_characterSpeedCore.Agility}");
-                break;
-            }
-        }
-        while (_kill == false);
+                _characterAPCore.AP_Current += GetIncrementAmount() * Time.deltaTime;
 
-        yield return null;
+                if (_characterAPCore.AP_Current == _characterAPCore.AP_Max)
+                {
+                    Debug.Log(
+                        $"Hit {_characterAPCore.AP_Max} AP in {(DateTime.Now - start).TotalSeconds} with Agility = {_characterSpeedCore.Agility}");
+                    break;
+                }
+            }
+        } while (true);
     }
 
     private bool _kill = true;

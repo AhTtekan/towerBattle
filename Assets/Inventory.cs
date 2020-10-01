@@ -26,8 +26,8 @@ public interface IInventory
 
 public class Inventory : IInventory
 {
-    private Dictionary<Item, int> inventoryItems = new Dictionary<Item, int>();
-    private Dictionary<Item, int> lockedItems = new Dictionary<Item, int>();
+    private List<Item> inventoryItems = new List<Item>();
+    private List<Item> lockedItems = new List<Item>();
 
     public Inventory()
     {
@@ -49,33 +49,33 @@ public class Inventory : IInventory
         result.Add(i1);
 
         var i2 = ScriptableObject.CreateInstance<BattleItem>();
-        i1.Name = "Hi Potion";
-        i1.TargetType = TargetTypes.Ally;
+        i2.Name = "Hi Potion";
+        i2.TargetType = TargetTypes.Ally;
         result.Add(i2);
 
         var i3 = ScriptableObject.CreateInstance<BattleItem>();
-        i1.Name = "Elixir";
-        i1.TargetType = TargetTypes.Ally;
+        i3.Name = "Elixir";
+        i3.TargetType = TargetTypes.Ally;
         result.Add(i3);
 
         var i4 = ScriptableObject.CreateInstance<BattleItem>();
-        i1.Name = "Phoenix Down";
-        i1.TargetType = TargetTypes.Ally;
+        i4.Name = "Phoenix Down";
+        i4.TargetType = TargetTypes.Ally;
         result.Add(i4);
 
         var i5 = ScriptableObject.CreateInstance<BattleItem>();
-        i1.Name = "Potion";
-        i1.TargetType = TargetTypes.Ally;
+        i5.Name = "Potion";
+        i5.TargetType = TargetTypes.Ally;
         result.Add(i5);
 
         var i6 = ScriptableObject.CreateInstance<BattleItem>();
-        i1.Name = "Fire Bomb";
-        i1.TargetType = TargetTypes.AllEnemies;
+        i6.Name = "Fire Bomb";
+        i6.TargetType = TargetTypes.AllEnemies;
         result.Add(i6);
 
         var i7 = ScriptableObject.CreateInstance<BattleItem>();
-        i1.Name = "Restore";
-        i1.TargetType = TargetTypes.Ally;
+        i7.Name = "Restore";
+        i7.TargetType = TargetTypes.Ally;
         result.Add(i7);
 
         return result;
@@ -83,26 +83,43 @@ public class Inventory : IInventory
 
     public void AddItem(Item item)
     {
-        if (inventoryItems.ContainsKey(item))
-            inventoryItems[item]++;
-        else
-            inventoryItems.Add(item, 1);
+        inventoryItems.Add(item);
     }
 
     public Dictionary<Item, int> GetAllItems()
     {
-        return inventoryItems;
+        Dictionary<Item, int> result = new Dictionary<Item, int>();
+
+        foreach (var item in inventoryItems.Distinct())
+        {
+            result.Add(item, inventoryItems.Count(x => x.Equals(item)));
+        }
+
+        return result;
     }
 
     public Dictionary<BattleItem, int> GetBattleItems()
     {
-        return inventoryItems.Where(x => x.Key is BattleItem)
-            .ToDictionary(x => x.Key as BattleItem, x => x.Value);
+        Dictionary<BattleItem, int> result = new Dictionary<BattleItem, int>();
+
+        foreach (BattleItem item in inventoryItems.Where(x => x is BattleItem).Distinct())
+        {
+            result.Add(item, inventoryItems.Count(x => x.Equals(item)));
+        }
+
+        return result;
     }
 
     public Dictionary<Item, int> GetLockedItems()
     {
-        return lockedItems;
+        Dictionary<Item, int> result = new Dictionary<Item, int>();
+
+        foreach (var item in lockedItems.Distinct())
+        {
+            result.Add(item, lockedItems.Count(x => x.Equals(item)));
+        }
+
+        return result;
     }
 
     public void LockItem(Item item)
@@ -113,11 +130,7 @@ public class Inventory : IInventory
 
     public void RemoveItem(Item item)
     {
-        if (!inventoryItems.ContainsKey(item) || inventoryItems[item] == 0)
-            throw new IndexOutOfRangeException($"Inventory does not contain item {item.Name}");
-        inventoryItems[item]--;
-        if (inventoryItems[item] == 0)
-            inventoryItems.Remove(item);
+        inventoryItems.Remove(item);
     }
 
     public void RemoveLockedItems()
@@ -127,7 +140,7 @@ public class Inventory : IInventory
 
     public void UnlockAllItems()
     {
-        foreach (var item in lockedItems.Keys.ToList())
+        foreach (var item in lockedItems)
         {
             UnlockItem(item);
         }
@@ -141,22 +154,17 @@ public class Inventory : IInventory
 
     private void addToLockedItems(Item item)
     {
-        if (lockedItems.ContainsKey(item))
-            lockedItems[item]++;
-        else
-            lockedItems.Add(item, 1);
+        lockedItems.Add(item);
 
         RemoveItem(item);
     }
 
     private void removeFromLockedItems(Item item)
     {
-        if (!lockedItems.ContainsKey(item) || lockedItems[item] == 0)
+        if (!lockedItems.Contains(item))
             throw new IndexOutOfRangeException($"{item.Name} not currently locked.");
 
-        lockedItems[item]--;
-        if (lockedItems[item] == 0)
-            lockedItems.Remove(item);
+        lockedItems.Remove(item);
 
         AddItem(item);
     }
