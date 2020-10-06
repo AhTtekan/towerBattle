@@ -6,6 +6,8 @@ public abstract class Character : Unit
 {
     public int Level;
 
+    public int Experience;
+
     public Sprite characterSprite;
 
     public Ability[] Abilities;
