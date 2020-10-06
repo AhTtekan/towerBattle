@@ -16,13 +16,14 @@ public static class TargetTypesExtensions
     {
         var characterManager = GameObject.FindObjectOfType<CharacterManager>();
         var battleManager = GameObject.FindObjectOfType<BattleManager>();
+        var characterMovementController = GameObject.FindObjectOfType<CharacterMovementController>();
 
         switch (targetType)
         {
             case TargetTypes.SelfOnly:
                 return new[]
                 {
-                    characterManager.SelectedCharacter
+                    characterMovementController.SelectedCharacter
                 };
             case TargetTypes.Ally:
                 return characterManager.Characters;

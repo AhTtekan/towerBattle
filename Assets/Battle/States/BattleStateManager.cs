@@ -1,5 +1,4 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
@@ -17,6 +16,7 @@ public class BattleStateManager : MonoBehaviour
     [SerializeField]
     private EventSystem eventSystem;
     [SerializeField]
+    private CharacterMovementController characterMovementController;
     private CharacterManager characterManager;
     [SerializeField]
     private Button defaultSelectedButton;
@@ -26,6 +26,8 @@ public class BattleStateManager : MonoBehaviour
 
     void Start()
     {
+        characterManager = GameObject.FindObjectOfType<CharacterManager>();
+
         currentState = battleStates[0];
         playerInput.SwitchCurrentActionMap(currentState.InputMapName);
         Debug.Log($"State initialized to {currentState.stateName}");
@@ -121,8 +123,8 @@ public class BattleStateManager : MonoBehaviour
 
     public void SetCharacterGUIActive(bool active)
     {
-        var character = active ? characterManager.SelectedCharacter : ScriptableObject.CreateInstance<PartyMember>();
-        foreach (var gui in GameObject.FindObjectsOfType<CharacterGUI>())
+        var character = active ? characterMovementController.SelectedCharacter : ScriptableObject.CreateInstance<PartyMember>();
+        foreach(var gui in GameObject.FindObjectsOfType<CharacterGUI>())
         {
             gui.Dim(character);
         }

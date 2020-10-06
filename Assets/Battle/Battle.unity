@@ -5502,8 +5502,9 @@ GameObject:
   - component: {fileID: 1981092985}
   - component: {fileID: 1981092983}
   - component: {fileID: 1981092986}
+  - component: {fileID: 1981092987}
   m_Layer: 0
-  m_Name: Manager
+  m_Name: BattleManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5589,7 +5590,7 @@ MonoBehaviour:
     m_ActionName: CharacterSelect/MoveToGuiSelection
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1586865493}
+      - m_Target: {fileID: 1981092987}
         m_MethodName: DecrementSelectedCharacter
         m_Mode: 0
         m_Arguments:
@@ -5615,7 +5616,7 @@ MonoBehaviour:
     m_ActionName: CharacterSelect/CharacterLeft
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1586865493}
+      - m_Target: {fileID: 1981092987}
         m_MethodName: IncrementSelectedCharacter
         m_Mode: 0
         m_Arguments:
@@ -5736,7 +5737,7 @@ MonoBehaviour:
   playerInput: {fileID: 1981092983}
   selectionGuiCanvas: {fileID: 625407366}
   eventSystem: {fileID: 1721440922}
-  characterManager: {fileID: 1586865493}
+  characterMovementController: {fileID: 1981092987}
   defaultSelectedButton: {fileID: 900854535}
 --- !u!114 &1981092986
 MonoBehaviour:
@@ -5777,6 +5778,18 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 8657a51e16b672d41a6306a85c28082a, type: 3}
   - {fileID: 21300000, guid: d4d321af904f0c84e8889adc70f69a9f, type: 3}
   - {fileID: 21300000, guid: fbe4379fd488c2d4ba8ae7117fab5764, type: 3}
+--- !u!114 &1981092987
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1981092982}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b30302e1a13330d4d92ace3e67640b41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2001247455
 GameObject:
   m_ObjectHideFlags: 0

@@ -6,7 +6,7 @@ public class AbilityColumnManager : ColumnManager
 {
     public override IEnumerable<IQueueable> GetNextColumnOptions()
     {
-        var abilities = GameObject.FindObjectOfType<CharacterManager>().SelectedCharacter.LearnedAbilities;
+        var abilities = GameObject.FindObjectOfType<CharacterMovementController>().SelectedCharacter.LearnedAbilities;
 
         return abilities.Select(x => x as IQueueable);
     }
