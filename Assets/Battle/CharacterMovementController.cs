@@ -1,11 +1,9 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class CharacterMovementController : MonoBehaviour
 {
-    public Character SelectedCharacter
+    public PartyMember SelectedCharacter
     {
         get
         {

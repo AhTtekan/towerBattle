@@ -1,5 +1,4 @@
-﻿using System.Linq;
-using TMPro;
+﻿using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -23,7 +22,7 @@ public class CharacterGUI : MonoBehaviour
         }
     }
 
-    internal void SetCharacter(Character character)
+    internal void SetCharacter(PartyMember character)
     {
         this.character = character;
 

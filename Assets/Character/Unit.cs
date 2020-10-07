@@ -1,5 +1,4 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 
 public abstract class Unit : ScriptableObject
 {
@@ -8,9 +7,9 @@ public abstract class Unit : ScriptableObject
     public int HP_Current;
     public int HP_Max;
 
-    public APCore APCore;// { get; set; } = new APCore() { APBuildRateInSeconds = 10, AP_Max = 10 };
+    public APCore APCore;
 
-    public SpeedCore SpeedCore;// { get; set; } = new SpeedCore() { Agility = 25 };
+    public SpeedCore SpeedCore;
 
     public virtual TargetTypes targetType { get; set; }
 
