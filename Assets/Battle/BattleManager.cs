@@ -2,6 +2,8 @@
 
 public class BattleManager : MonoBehaviour
 {
+    public BattleQueueGUI battleQueueGUI;
+
     public Transform CharacterGUIPrefab;
 
     public Encounter Encounter;
@@ -15,6 +17,12 @@ public class BattleManager : MonoBehaviour
     void Start()
     {
         BuildCharacterGUIs();
+        InitializeQueueGUI();
+    }
+
+    private void InitializeQueueGUI()
+    {
+        battleQueueGUI.Initialize(10);
     }
 
     private void BuildCharacterGUIs()
